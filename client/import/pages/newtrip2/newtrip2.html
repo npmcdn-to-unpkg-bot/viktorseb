@@ -1,0 +1,167 @@
+<section class="headerbars">
+	<bread-crumbs></bread-crumbs>
+	<div class="bar bar-wizard">
+		<div class="wrap">
+			<ul>
+				<li>
+					<strong>Planning new trip</strong>
+					<span>Travify makes it easy</span>
+				</li>
+				<li>
+					<strong>Step 1</strong>
+					<span>Trip information</span>
+				</li>
+				<li class="active">
+					<strong>Step 2</strong>
+					<span>Your interest</span>
+				</li>
+				<li>
+					<strong>Step 3</strong>
+					<span>Your itinerary</span>
+				</li>
+				<li>
+					<strong>Step 4</strong>
+					<span>Trip Summary</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+<section id="page-tripinfo" class="page-content">
+	<div class="wrap">
+		<h2 class="main-heading bot-border">Adjust your focus for this trip</h2>
+		<div>
+			<div class="range-group">
+				<label>Museums and art</label>
+				<input type="range" min="0" max="10" step="1">
+				<div class="min">0</div>
+				<div class="max">10</div>
+			</div>
+			<div class="range-group">
+				<label>Nature</label>
+				<input type="range" min="0" max="10" step="1">
+				<div class="min">0</div>
+				<div class="max">10</div>
+			</div>
+		</div>
+		<div>
+			<div class="range-group">
+				<label>Shopping</label>
+				<input type="range" min="0" max="10" step="1">
+				<div class="min">0</div>
+				<div class="max">10</div>
+			</div>
+			<div class="range-group">
+				<label>Adventure</label>
+				<input type="range" min="0" max="10" step="1">
+				<div class="min">0</div>
+				<div class="max">10</div>
+			</div>
+		</div>
+		<div>
+			<div class="range-group">
+				<label>Street and squares</label>
+				<input type="range" min="0" max="10" step="1">
+				<div class="min">0</div>
+				<div class="max">10</div>
+			</div>
+			<div class="range-group">
+				<label>Monuments and landmarks</label>
+				<input type="range" min="0" max="10" step="1">
+				<div class="min">0</div>
+				<div class="max">10</div>
+			</div>
+		</div>
+		<h2 class="main-heading bot-border">Saved locations/events</h2>
+		<ul class="saved-list cols-3">
+			<li>
+				<div class="inner card card-info selectable selected" ng-click="savedClick($event);">
+					<div class="min"><img src="upload/attraction.jpg" alt="" /></div>
+					<div class="content">
+						<h3 class="heading">Botanic Gardens</h3>
+						<div class="type"><span class="fa fa-university"></span> Landmark</div>
+						<div class="tags">nature, green, musical</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="inner card card-info selectable selected" ng-click="savedClick($event);">
+					<div class="min"><img src="upload/attraction.jpg" alt="" /></div>
+					<div class="content">
+						<h3 class="heading">Botanic Gardens</h3>
+						<div class="type"><span class="fa fa-university"></span> Landmark</div>
+						<div class="tags">nature, green, musical</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="inner card card-info selectable" ng-click="savedClick($event);">
+					<div class="min"><img src="upload/attraction.jpg" alt="" /></div>
+					<div class="content">
+						<h3 class="heading">Botanic Gardens</h3>
+						<div class="type"><span class="fa fa-university"></span> Landmark</div>
+						<div class="tags">nature, green, musical</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="inner card card-info selectable" ng-click="savedClick($event);">
+					<div class="min"><img src="upload/attraction.jpg" alt="" /></div>
+					<div class="content">
+						<h3 class="heading">Botanic Gardens</h3>
+						<div class="type"><span class="fa fa-university"></span> Landmark</div>
+						<div class="tags">nature, green, musical</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="inner card card-info selectable" ng-click="savedClick($event);">
+					<div class="min"></div>
+					<div class="content">
+						<h3 class="heading">Botanic Gardens</h3>
+						<div class="type"><span class="fa fa-map-marker"></span> Unofficial Location</div>
+						<div class="tags">nature, green, musical</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="inner card card-info selectable" ng-click="savedClick($event);">
+					<div class="min"><img src="upload/attraction.jpg" alt="" /></div>
+					<div class="content">
+						<h3 class="heading">Botanic Gardens</h3>
+						<div class="type"><span class="fa fa-fw fa-calendar"></span> Official Event</div>
+						<div><span class="fa fa-fw fa-clock-o"></span> 10am to 12pm</div>
+						<div><span class="fa fa-fw fa-map-marker"></span> Sunghei Wetlands</div>
+						<div><span class="fa fa-fw fa-users"></span> 31 participants</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="inner card card-info selectable" ng-click="savedClick($event);">
+					<div class="min"></div>
+					<div class="content">
+						<h3 class="heading">Botanic Gardens</h3>
+						<div class="type"><span class="fa fa-map-marker"></span> Unofficial Location</div>
+						<div class="tags">nature, green, musical</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="inner card card-info selectable" ng-click="savedClick($event);">
+					<div class="min"><img src="upload/attraction.jpg" alt="" /></div>
+					<div class="content">
+						<h3 class="heading">Botanic Gardens</h3>
+						<div class="type"><span class="fa fa-fw fa-calendar"></span> Official Event</div>
+						<div><span class="fa fa-fw fa-clock-o"></span> 10am to 12pm</div>
+						<div><span class="fa fa-fw fa-map-marker"></span> Sunghei Wetlands</div>
+						<div><span class="fa fa-fw fa-users"></span> 31 participants</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+		<div class="align-right clearfix bottom-btns">
+			<a href="/newtrip-1" class="btn btn-asphalttr fleft">Prev step</a>
+			<a href="/loading" class="btn btn-asphalt">Next step</a>
+		</div>
+	</div>
+</section>
