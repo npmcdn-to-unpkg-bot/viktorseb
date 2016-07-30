@@ -1,0 +1,10 @@
+{
+  "globalDependencies": {
+    "angular": "registry:dt/angular#1.5.0+20160725073351",
+    "angular-route": "registry:dt/angular-route#1.3.0+20160317120654",
+    "geojson": "registry:dt/geojson#0.0.0+20160619034323",
+    "jquery": "registry:dt/jquery#1.10.0+20160704162008",
+    "leaflet": "registry:dt/leaflet#1.0.0+20160630180443",
+    "oclazyload": "registry:dt/oclazyload#0.0.0+20160317120654"
+  }
+}
