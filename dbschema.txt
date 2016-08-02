@@ -1,0 +1,36 @@
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+CREATE TABLE `attractions` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `openTime` time NOT NULL DEFAULT '00:00:00',
+  `closeTime` time NOT NULL DEFAULT '23:59:59',
+  `description` text NOT NULL,
+  `price` decimal(10,2) UNSIGNED NOT NULL DEFAULT '0.00',
+  `img` text NOT NULL,
+  `location` varchar(200) NOT NULL,
+  `facebook` varchar(128) NOT NULL,
+  `instagram` varchar(128) NOT NULL,
+  `ratingCount` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `ratingSum` int(10) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+CREATE TABLE `users` (
+  `Id` int(10) UNSIGNED NOT NULL,
+  `Username` varchar(50) NOT NULL,
+  `Password` text NOT NULL,
+  `Rank` tinyint(3) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+ALTER TABLE `attractions`
+  ADD PRIMARY KEY (`id`);
+
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`Id`),
+  ADD KEY `UsernameINDEX` (`Username`);
+
+ALTER TABLE `attractions`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `users`
+  MODIFY `Id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
