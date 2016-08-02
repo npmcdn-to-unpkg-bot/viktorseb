@@ -1,0 +1,72 @@
+        controller: function($http){
+            $http({
+                method: 'POST',
+                url: "http://188.166.230.3:8080/TripEngine/TripEngine",
+                data: {
+                    "cashFlow": 500,
+                    "travelDays": 3,
+                    "startTime": 800,
+                    "endTime": 2230,
+                    "startAddress": 45,
+                    "endAddress": 45,
+                    "mustGo": []
+                }
+            }).then(function(result){
+                console.log(result);
+            }, function(){
+                console.log("error occured");
+            });
+            L.Icon.Default.imagePath = 'packages/bevanhunt_leaflet/images';
+	        var map = L.map('google-map', {zoomControl: true}).setView([1.290270, 103.851959], 14);
+            L.tileLayer('http://api.tiles.mapbox.com/v4/mapbox.streets/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoieWlzaDkxIiwiYSI6ImNpb3Y0OGR5ODAwdmd0aG00eHlreW14eHMifQ.LV7N1cFaD4ll27UrYUllyQ', {
+                maxZoom: 18,
+                id: 'mapbox.streets',
+                accessToken: 'pk.eyJ1IjoieWlzaDkxIiwiYSI6ImNpb3Y0OGR5ODAwdmd0aG00eHlreW14eHMifQ.LV7N1cFaD4ll27UrYUllyQ',
+                detectRetina: true
+            }).addTo(map);
+            map.zoomControl.setPosition('bottomleft');
+            
+            var resultArr = resultsList[0];
+            var latlngArray = [];
+
+            for (var i = 0; i < resultArr.length; i++){
+                if(resultArr[i]) {
+                    var ltln = L.latLng(resultArr[i].lat, resultArr[i].lng);
+                    latlngArray.push(ltln);
+                }
+            }
+            var control = LeafletRouting.control({
+                draggableWaypoints: false,
+                addWaypoints: false,
+                routeWhileDragging: false,
+                show: false,
+                plan: LeafletRouting.plan(latlngArray, {
+                    createMarker: function (i, wp) {
+                        var markerIcon = L.icon({
+                            iconUrl: '/img/map-marker-red.png',
+                            iconSize:     [50, 50],
+                            iconAnchor:   [25, 25],
+                            popupAnchor:  [0, -10]
+                        });
+                        var marker = L.marker(wp.latLng, {icon: markerIcon});
+                        marker.bindPopup("temporary text");
+                        marker.on('mouseover', function (e) {
+                            this.openPopup();
+                        });
+                        marker.on('mouseout', function (e) {
+                            this.closePopup();
+                        });
+                        return marker;
+                    }
+                }),
+                lineOptions: {
+                    styles: [{color: '#ff629f', opacity: 0, weight: 9}, {
+                        color: '#ff629f',
+                        opacity: 1,
+                        weight: 6
+                    }, {color: '#ff629f', opacity: 1, weight: 2}]
+                }
+            }).addTo(map);
+            $('#google-map').data('leafletControlInstance', control);
+            
+        }
