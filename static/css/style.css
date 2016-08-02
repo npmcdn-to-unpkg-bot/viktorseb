@@ -215,3 +215,33 @@ header .user-nav ul li a img{width: 100%; height: 100%; border-radius: 100%; -mo
 .timeline li.active .timeline-timeblock .marker{border-color: #ff629f;}
 .timeline li .timeline-timeblock:before{content: ''; position: absolute; top: 50%; right: 25px; width: 4px; height: 100%; padding: 10px 0; background: #f4f8fb;}
 .timeline li:last-of-type .timeline-block.timeline-timeblock:before{display: none;}
+
+/* FEED (not prefixed!) */
+.feed{margin: 30px -20px; font-size: 0;}
+.feed-box{width: 33.33%; display: inline-block; vertical-align: top; font-size: 16px; padding: 20px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
+.feed-box .header{background-size: cover; background-repeat: no-repeat; background-position: center; width: 100%; height: 0; padding-bottom: 50%; border-top-left-radius: 5px; border-top-right-radius: 5px;}
+.feed-box .body{background: #fff; padding: 0 20px 20px 20px;}
+.feed-box .body .author-pic{vertical-align: top; width: 70px; height: 70px; border-radius: 50%; border: 3px solid #fff;}
+.feed-box .body .author-block{display: inline-block; width: 100%; margin-top: -38px;}
+.feed-box .body .author-block .author-pic, .feed-box .body .author-block .text{display: inline-block; vertical-align: middle;}
+.feed-box .body .author-block .text{width: 100%; margin-left: -80px; padding-left: 90px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
+.feed-box .body .author-block .text .author, .feed-box .body .author-block .text span{line-height: 38px;}
+.feed-box .body .author-block .text .author{font-size: 18px; font-weight: bold; color: #fff;}
+.feed-box .body .author-block .text span{margin-right: 15px; font-size: 15px;}
+.feed-box .body .author-block .text span span{vertical-align: middle;}
+.feed-box .body .author-block .text .fa{color: #000; font-size: 18px; margin-right: 6px;}
+.feed-box .body p{font-size: 15px; line-height: 1.5em; color: #7b7b7b; padding-top: 20px;}
+.feed-box .footer{padding: 15px 20px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background: #f4f8fb;}
+.feed-box .footer > span{margin-right: 15px; font-size: 15px;}
+.feed-box .footer span .fa{font-size: 16px; margin-right: 5px;}
+.feed-box .footer span span{vertical-align: middle; color: #b4bcc7;}
+.feed-box .footer span.right{float: right; position: relative; top: 2px;}
+.feed-box .footer span.right span{color: #fe70a8;}
+
+@media (max-width: 1400px){
+	.feed-box .body{padding: 0 12px 12px 12px;}
+	.feed-box .body .author-block .text{padding-left: 80px;}
+	.feed-box .body .author-block .text span{font-size: 14px; margin-right: 5px;}
+	.feed-box .body .author-block .text .fa{font-size: 16px; margin-right: 3px;}
+	.feed-box .footer{padding: 12px;}
+}

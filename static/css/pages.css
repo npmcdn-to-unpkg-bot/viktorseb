@@ -106,3 +106,7 @@
 #page-loading .subscript{font-size: 20px; font-weight: bold; max-width: 350px;}
 #page-loading h2.main-heading,#page-loading .subscript{display: block; margin: 0 auto; padding: 0; line-height: 1.3em;}
 #page-loading .loader{margin-bottom: 0;}
+
+/* FEED PAGE */
+#page-feed{background: #fafafa; min-height: 100vh;}
+#page-feed .wrap .headerimg{width: 100%;}

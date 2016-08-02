@@ -55,6 +55,14 @@
                     }]
                 }
             })
+            .when('/feed', {
+                template: '<page-feed></page-feed>',
+                resolve: {
+                    loadComponent: ['$ocLazyLoad', function($ocLazyLoad: any) {
+                        return $ocLazyLoad.load('ui/pages/feed/feed.js');
+                    }]
+                }
+            })
             .otherwise('/');
     });
 })();

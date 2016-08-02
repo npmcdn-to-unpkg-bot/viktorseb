@@ -59,11 +59,7 @@ class PageNewTrip3{
             routeWhileDragging: false,
             show: false,
             plan: L.Routing.plan(latlngArray, {
-<<<<<<< HEAD
                 createMarker: function (i: number, wp) {
-=======
-                createMarker: function (i, wp) {
->>>>>>> origin/master
                     var marker = L.marker(wp.latLng, {icon: iconInactive});
                     marker.bindPopup("temporary text");
                     marker.addEventListener('click', activateMarker);
@@ -87,11 +83,7 @@ class PageNewTrip3{
        // angular.element('#google-map').data('leafletControlInstance', control);
         //$scope.route = "[{link: '#', text: 'Travify'}, {link: '#', text: 'My trips'}, {link: '#', text: 'Travify Itinerary planner'}]";
 
-<<<<<<< HEAD
         $scope.toggleEstimates = function(event: Event){
-=======
-        $scope.toggleEstimates = function(event){
->>>>>>> origin/master
             angular.element(event.currentTarget).toggleClass('off');
             angular.element('.timeline .card-estimate').parent().parent().slideToggle();
         }

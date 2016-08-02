@@ -1,5 +1,5 @@
 var monarchApp = angular.module('monarchApp', ['ngRoute', 'ngAnimate']);
-var socket = io('http://localhost:8000/general');
+var socket = io.connect('http://localhost:8000/admin');
 
 // configure our routes
 monarchApp.config(function($routeProvider) {
@@ -40,7 +40,7 @@ monarchApp.controller('indexController', function($scope, $http, $timeout) {
         })
         $timeout(checkOnline, 5000);
     };
-    $timeout(checkOnline, 5000);
+    checkOnline();
 });
 
 monarchApp.controller('attrListController', function($scope, $http) {

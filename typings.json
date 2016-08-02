@@ -5,6 +5,8 @@
     "geojson": "registry:dt/geojson#0.0.0+20160619034323",
     "jquery": "registry:dt/jquery#1.10.0+20160704162008",
     "leaflet": "registry:dt/leaflet#1.0.0+20160630180443",
-    "oclazyload": "registry:dt/oclazyload#0.0.0+20160317120654"
+    "node": "registry:dt/node#6.0.0+20160801161248",
+    "oclazyload": "registry:dt/oclazyload#0.0.0+20160317120654",
+    "socket.io": "registry:dt/socket.io#1.4.4+20160317120654"
   }
 }
