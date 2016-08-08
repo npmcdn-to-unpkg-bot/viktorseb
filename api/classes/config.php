@@ -4,7 +4,7 @@
         private $dbhost = 'localhost';
         private $dbname = 'travify';
         private $dbuser = 'root';
-        private $dbpass = '';
+        private $dbpass = 'root';
         //End of config
 
         public function getConnection(){
