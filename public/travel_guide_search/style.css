@@ -1,0 +1,247 @@
+.travel-guide-search-body {
+  background-color: #424A63;
+  background-size: cover;                 
+  background-repeat: no-repeat;
+  background-position: center center; 
+}
+
+.header-background{
+	border-radius: 4px;
+	margin:auto;
+	background: url("../placeholders/placeholder_bg1-1040x456.png");
+	height: 456px;
+	width: 1040px;
+}
+
+.font-GothicCentury{
+  font-family: 'Century Gothic';
+  text-align: center;
+  color:#FFF
+}
+
+.font-OpenSans{
+  font-family: 'Open Sans'; 
+}
+
+.font-GothicCentury.header-text{
+  padding-top: 150px;
+  font-size:70px;
+  letter-spacing: 10px;
+}
+
+.font-GothicCentury.sub-header-text{
+	padding-bottom: 50px;
+  font-weight: bold;
+  font-size:16px;
+}
+
+.font-GothicCentury.box-text{
+  padding-top: 80px;
+  margin:auto; 
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.font-GothicCentury.sub-box-text{
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.font-OpenSans.header-button{
+  margin-left:428px;
+	width:180px;
+	height: 50px;
+	border-radius:100px;
+	border-style:none;
+	cursor:pointer;
+	background: #FF629F;
+	outline:0;
+	color:#FFF;
+	font-weight:bold;
+	font-size:15px;
+	letter-spacing: 1px;
+}
+
+.boxclose{
+  float:right;
+  cursor:pointer;
+  color: #fff;
+  font-weight: bold;
+  padding: 10.5px 4px;
+  line-height: 0px;
+  font-size: 20px; 
+}
+
+.boxclose.close-search{
+  float:right;
+  cursor:pointer;
+  margin-right: 65px;
+  border-radius: 50px;
+  background: #000;
+}
+
+.boxclose.close-header{
+  margin: 10px 10px;
+  border-radius: 70px;
+  opacity: .5;
+  background: #424242;      
+}
+
+.icon{
+  width:60px;
+  height:54px;
+  float:left;
+  cursor:pointer;
+  color: #A3ADBB;
+  background:#FFF;
+  font-size: 20px;
+  padding: 20px 20px; 
+  margin-bottom:10px;
+}
+
+.search{
+  outline:0px;
+  border-style:none;
+  color:#D3DAE0; 
+  background-color:#000;
+}
+
+.search.search-bar{
+	margin-top:70px;
+	width:1040px;
+	height:60px;
+}
+
+.search.search-input{
+	margin-left:135px; 
+	padding-top: 5px;
+}
+
+.content-background{
+  background:#FFF;
+  bottom:5px;
+  margin:auto;
+  width:1040px;
+  height:941px;
+  border-bottom-left-radius: 0.4em;
+  border-bottom-right-radius: 0.4em;
+}
+
+.content{
+  background:#FFF;
+  width:980px;
+}
+.content.content-navbar{
+  height:80px;
+}
+
+.content.content-images{
+  margin:auto;
+  margin-top: 14px;
+  height:941px;
+}
+
+.font-OpenSans.content-text{
+  width: 200px;
+  height:20px;
+  top:30px;
+  right:-8px;
+  position: relative;
+  color: #424A63; 
+}
+
+.font-OpenSans.dropdown-navbar{
+  width: 300px;
+  height:20px;
+  bottom:5px;
+  left:77px;
+  float:right;
+  position: relative;
+  color: #424A63; 
+}
+
+.box-images{
+  margin: 33.5px 0px 0px 5.5px;
+  width:296px;
+  height:178px;
+}
+
+.box-images.top{
+  margin: 15px 0px 0px 5px;
+}
+
+.box-images.top.box-images1 {
+  background:url("../placeholders/placeholder_img_attractions_1-296x178.png");
+}
+
+.box-images.box-images2 {
+  background:url("../placeholders/placeholder_img_attractions_4-296x178.png");
+}
+
+.box-images.box-images3 {
+  background:url("../placeholders/placeholder_img_attractions_1-296x178.png");
+}
+
+.box-images.box-images4 {
+  background:url("../placeholders/placeholder_img_attractions_4-296x178.png");
+}
+
+.box-images.top.box-images5 {
+  background:url("../placeholders/placeholder_img_attractions_2-296x178.png");
+}
+
+.box-images.box-images6 {
+  background:url("../placeholders/placeholder_img_attractions_5-296x178.png");
+}
+
+.box-images.box-images7 {
+  background:url("../placeholders/placeholder_img_attractions_2-296x178.png");
+}
+
+.box-images.box-images8 {
+  background:url("../placeholders/placeholder_img_attractions_5-296x178.png");
+}
+
+.box-images9 {
+  background:url("../placeholders/placeholder_img_attractions_3-296x178.png");
+  margin:-18px 0px 0px -8px;
+  width:296px;
+  height:178px;
+}
+
+.box-images10 {
+  background:url("../placeholders/placeholder_img_attractions_6-296x178.png");
+  margin: 33px 0px 0px -8px;
+  width:296px;
+  height:178px;
+}
+
+.box-images11 {
+  background:url("../placeholders/placeholder_img_attractions_3-296x178.png");
+  margin: 33px 0px 0px -8px;
+  width:296px;
+  height:178px;
+}
+
+.box-images12 {
+  background:url("../placeholders/placeholder_img_attractions_6-296x178.png");
+  margin: 33px 0px 0px -8px;
+  width:296px;
+  height:178px;
+}
+
+.thumbs-up{
+  font-size:15px;
+  color:#FFF; 
+  margin-left:180px; 
+  margin-top:20px;
+}
+
+.comment{
+  font-size: 15px;
+  color:#FFF; 
+  padding-right: 10px;
+  float:right; 
+  margin-top:20px;
+}
+

@@ -1,0 +1,230 @@
+/*tgo = Travel Guide Overview*/
+.tgo-row-description {
+  border-bottom: 1px solid #f6f0f0;
+}
+
+.tgo-plan-trip-now-btn{
+	background: #FF629F;
+}
+
+.tgo-get-ticket-btn > .icon,.tgas-get-ticket-btn > .icon {
+  	margin-left: -85px;
+}
+
+.tgo-row-button {
+	padding: 120px 20px 10px 37px
+}
+
+/*tgas = Travel Guide Attraction Single page*/
+.tgas-bookmark-btn > .icon {
+	color: #48b8e0;
+  	margin-left: -63px;
+}
+
+.second-plain-button.tgas-bookmark-btn {
+  	background: #48b8e0;
+}
+
+.tgas-row {
+	margin: 0px;
+	box-shadow: 0px 1px 1px 0px #A3ADBB;
+	height: 277px;
+}
+
+.tgas-row > img {
+	width: 100%;
+	height: 140px;
+}
+
+.tgas-row-event-picture-detail {
+	width: 217px;
+  	margin: 0px 5px 10px;
+}
+
+.tgas-row-event-picture-detail > img {
+	height: 140px;
+}
+
+.tgas-event-picture-description {
+	padding: 5px 10px 0px;
+}
+.tgas-picture-footer-btn > p {
+    padding: 8px 13px !important;
+}
+.tg-picture-footer-btn.tgas-picture-footer-btn {
+	margin-top: 14px;
+	font-size: 12px;
+}
+
+.tgas-row-footer {
+  padding: 10px 10px 20px 19px;
+  border-top: 1px solid #f6f0f0;
+}
+.tgas-row-footer-picture,.tgas-row-footer-picture  > img {
+  width:100%;
+  margin-bottom: 10px;
+}
+
+.tgas-row-footer-picture-name {
+  position: absolute;
+  font-size: 12px;
+  color: white;
+  width: 100%;
+  top: 45px;
+  right: 2px;
+}
+
+/*Tge = Travel Guide Tab Events*/
+.tge-row {
+	padding: 45px 40px 40px;
+}
+
+.tge-event-now-title,.tge-upcoming-event-title{
+    height: 48px;
+    border-bottom: 1px solid #f6f0f0;
+    margin: 0px 12px;
+}
+
+.tge-event-now-title > p,.tge-upcoming-event-title > p  {
+	color: #424a63;
+	font-size: 15px;
+}
+
+.tge-row-event-picture-detail > img {
+	height: 140px;
+}
+
+.tg-row-event-picture.tge-row-event-picture {
+	padding: 20px 0px 0px;
+	margin: 15px 0px 0px;
+}
+
+.tg-picture-footer-btn.tge-picture-footer-btn {
+	margin-top: 15px;
+}
+
+/*Tgf = Travel Guide Feeds*/
+.tgf-profil-travellers {
+	width: 70px;
+	height: 70px;
+}
+.tg-review-description-title.tgf-feeds-travellers {
+  	border-right: none;
+  	padding-left: 0px;
+  	padding-right: 10px;
+}
+.tg-review-description-title.tgf-feeds-travellers > p{
+  	font-size: 12px;
+  	border-bottom: 1px solid #A3ADBB;
+  	padding: 20px 20px 20px 0px;
+}
+.font-profil-name.tgf-profil-name {
+	font-size: 15px;
+	top: -7px;
+	left: 95px;
+}
+.profil-size.image-profil.tgf-profil {
+	top: -10px;
+	left: 30px;
+}
+.col-md-6.tgf-padding-right {
+	padding-right: 0px;
+	padding-left: 10px;
+}
+.col-md-4.tgf-padding-left {
+	padding: 3px 0px 0px 3px;
+}
+.col-md-4.tgf-padding-left-box2 {
+	padding: 3px 0px 0px 3px;
+	left: -13px;
+}
+.col-md-4.tgf-padding-top {
+  	padding-top: 3px;
+}
+.br-between-nav {
+	padding-top: 10px;
+}
+.br-between-border {
+	margin: 10px;
+}
+<<<<<<< HEAD
+/*Tge = Travel Guide Tab Events*/
+@media screen and (max-width: 980px){
+=======
+
+@media screen and (max-width: 1000px){
+	.profil-size.image-profil.tgf-profil {
+		top: 330px;
+	}
+	.font-profil-name.tgf-profil-name {
+		top: 330px;
+	}
+	.font-time {
+		padding: 1% 0% 0% 13%;
+	}
+	.font-weight.font-save-location {
+	  	padding: 1.5% 0% 0% 60%;
+	}
+	.font-comment {
+	  	padding: 1.5% 0% 0% 10%;
+	}	
+>>>>>>> f5e0541de532226bcdf744f8f9fc5d1b399657b2
+	.col-md-4.tgf-padding-left-box2 {
+		left: 15px;
+	}
+	.col-md-4.tgf-padding-left {
+		left: 15px;
+	}
+	.tg-review-description-title.tgf-feeds-travellers {
+		padding-right: 25px;
+	}
+	.tgo-row-button {
+	    padding: 120px 20px 10px 0px;
+	}
+	.tgo-get-ticket-btn > .icon, .tgas-get-ticket-btn > .icon {
+    	margin-left: -70px;
+	}
+	.tgas-bookmark-btn > .icon {
+    	margin-left: -49px;
+	}
+	.tgas-row-footer-picture-name {
+		top: 30px;
+	}
+}
+@media screen and (max-width: 360px){	
+	.tg-review-description-title.tgf-feeds-travellers {
+		padding-right: 15px;
+	}
+	.tg-row-footer {
+	    padding: 10px 10px 20px 19px;
+	}
+	.tgas-row {
+		margin: 10px 0px;
+	}
+	.tgo-row-button,.tgas-row-button {
+		padding: 40px;
+	}
+}
+@media screen and (max-width: 320px) {	
+	.tg-review-description-title.tgf-feeds-travellers {
+		padding-right: 0px;
+	}	
+	.font-time {
+		font-size: 9px;
+	}
+<<<<<<< HEAD
+=======
+	.font-weight.font-save-location {
+	  	padding: 3.5% 0% 0% 60%;
+	}
+	.font-comment {
+	  	padding: 3.5% 0% 0% 10%;
+	}	
+	.tg-review-description-title.tgf-feeds-travellers {
+		padding-right: 0px;
+	}
+	.tgo-row-button {
+		padding: 40px 20px 10px 0px !important;
+	}
+>>>>>>> f5e0541de532226bcdf744f8f9fc5d1b399657b2
+}

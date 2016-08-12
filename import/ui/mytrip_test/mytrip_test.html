@@ -1,0 +1,152 @@
+<template name="my_trip">
+
+<link rel="stylesheet" href="mytrip/mytrip.css">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+
+<div class="conatiner col-md-12 row-mytrips cover">
+	<div class="container"> 
+		{{> banner_mytrip}}
+	</div>	
+		<br>
+	<div class="row col-md-12 row-mytrips">	
+		<div class="container">	
+			<div class="col-md-7 padding padding-panel">
+				<div class="col-md-12 no-padding">
+					<div class="background-color-panel box-panel-calender font-century-gothic color-white font-weight-bold">
+						<span class="font-panel-padding"> Calender Test </span>
+					</div>
+				</div>	
+				<div class="col-md-12 no-padding">
+					<div class="div-calender-event">
+						<img src="calender.png" class="calender-img">
+						<div class="col-md-9 padding-top">
+							<div class="box-mytrips event font-century-gothic color-black">
+								<img src="placeholders/placeholder_small_img1.png" class="image-mytrips event img-responsive">
+								<span class="font-century-gothic color-black font-weight-bold font-event-title">Music Festival 2016</span>
+								<span class="font-open-sans font-event-time"><i class="fa fa-calendar"><span class="space-between">Event</span></i></span>
+							</div>		
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-5 no-padding no-padding-panel">
+				<div class="col-md-12 no-padding">
+					<div class="background-color-panel box-panel-calender panel-mytrips font-century-gothic color-white font-weight-bold">
+						<span class="font-panel-padding left"> My Trips </span>
+					</div>
+				</div>
+
+				<div class="col-md-12 padding-top">
+					<div class="box-mytrips font-century-gothic color-black">
+						<img src="placeholders/placeholder_mytrip_1.png" class="image-mytrips img-responsive">
+						<span class="font-weight-bold font-text-mytrips-title title-padding">SINGAPORE</span>
+						<span class="font-weight-bold font-text-mytrips-date title-padding date">9 JAN 2016 - 14 JAN 2016</span>
+						<span class="font-open-sans font-mytrips-detail title-padding detail">See details</span>
+						<span class="font-open-sans font-mytrips-detail title-padding detail title-padding space">Edit trip</span>
+						<span class="font-weight-bold font-current-date title-padding bydate">Current Day 1</span>
+					</div>		
+				</div>
+				<div class="col-md-12 padding-top">
+					<div class="box-mytrips font-century-gothic color-black">
+						<img src="placeholders/placeholder_mytrip_2.png" class="image-mytrips img-responsive">
+						<span class="font-weight-bold font-text-mytrips-title title-padding">SINGAPORE - MALAYSIA</span>
+						<span class="font-weight-bold font-text-mytrips-date title-padding date">24 AUG 2020 - 30 AUG 2020</span>
+						<span class="font-open-sans font-mytrips-detail title-padding detail">See details</span>
+						<span class="font-open-sans font-mytrips-detail title-padding detail title-padding space">Edit trip</span>
+						<span class="font-weight-bold font-current-date title-padding bydate-update color-gray">Up next</span>
+					</div>		
+				</div>
+				<div class="col-md-12 padding-top">
+					<div class="box-mytrips font-century-gothic color-black">
+						<img src="placeholders/placeholder_mytrip_3.png" class="image-mytrips img-responsive">
+						<span class="font-weight-bold font-text-mytrips-title title-padding">MEDITERRANEAN</span>
+						<span class="font-weight-bold font-text-mytrips-date title-padding date">24 DEC 2023 - 30 DEC 2023</span>
+						<span class="font-open-sans font-mytrips-detail title-padding detail">See details</span>
+						<span class="font-open-sans font-mytrips-detail title-padding detail title-padding space">Edit trip</span>
+					</div>		
+				</div>	
+				<div class="col-md-12 padding-top">
+					<div class="box-btn-new-trip">
+						<center>
+						<p class="font-weight-bold font-add-plan color-white"> <i class="fa fa-plus"> </i> <span class="space-between"> PLAN A NEW TRIP </span> </p>
+						</center>
+					</div>
+				</div>
+				<div class="col-md-12 padding-top">
+					<div class="background-color-panel box-panel-calender panel-mytrips font-century-gothic color-white font-weight-bold">
+						<span class="font-panel-padding float-left"> Friends </span>
+						<a href="#" class="color-white"> <span class="font-panel-padding float-right color-white"> See all </span> </a>
+					</div>
+				</div>	
+				<div class="col-md-12 padding-top">
+					<div class="box-profil-friend">
+						<div class="div-image-myfriend col-md-4 no-padding">
+							<img src="placeholders/avatar_1.png" class="image-myfriend"> 
+							<div class="font-open-sans font-weight-bold font-myfriend-profil-name div-profil-name-myfriend color-white">
+								Valerie.Mel
+							</div>
+						</div>	
+
+						<div class="div-image-myfriend second col-md-4 no-padding">
+							<img src="placeholders/avatar_2.png" class="image-myfriend">
+							<div class="font-open-sans font-weight-bold font-myfriend-profil-name div-profil-name-myfriend second color-white">
+								August Wind
+							</div>
+						</div>	 
+
+						<div class="div-image-myfriend third col-md-4 no-padding">
+							<img src="placeholders/avatar_3.png" class="image-myfriend">
+							<div class="font-open-sans font-weight-bold font-myfriend-profil-name div-profil-name-myfriend third color-white">
+								Ho Jooyung
+							</div>
+						</div>
+
+						<div class="div-image-myfriend col-md-4 no-padding">
+							<img src="placeholders/avatar_4.png" class="image-myfriend"> 
+							<div class="font-open-sans font-weight-bold font-myfriend-profil-name div-profil-name-myfriend color-white">
+								Ma Yong Jin
+							</div>
+						</div>
+
+						<div class="div-image-myfriend second col-md-4 no-padding">	
+							<img src="placeholders/avatar_5.png" class="image-myfriend">
+							<div class="font-open-sans font-weight-bold font-myfriend-profil-name div-profil-name-myfriend second color-white">
+								Audrey
+							</div>
+						</div>
+
+						<div class="div-image-myfriend third col-md-4 no-padding">	 
+							<img src="placeholders/avatar_6.png" class="image-myfriend">
+							<div class="font-open-sans font-weight-bold font-myfriend-profil-name div-profil-name-myfriend third color-white">
+								Gwen June
+							</div>
+						</div>	
+
+						<div class="div-image-myfriend col-md-4 no-padding">
+							<img src="placeholders/avatar_7.png" class="image-myfriend"> 
+							<div class="font-open-sans font-weight-bold font-myfriend-profil-name div-profil-name-myfriend color-white">
+								Frey.J
+							</div>
+						</div>
+
+						<div class="div-image-myfriend second col-md-4 no-padding">	
+							<img src="placeholders/avatar_8.png" class="image-myfriend">
+							<div class="font-open-sans font-weight-bold font-myfriend-profil-name div-profil-name-myfriend second top color-white">
+								Scott <br> Rambles
+							</div>
+						</div>
+
+						<div class="div-image-myfriend third col-md-4 no-padding">	 
+							<img src="placeholders/avatar_9.png" class="image-myfriend">
+							<div class="font-open-sans font-weight-bold font-myfriend-profil-name div-profil-name-myfriend third top color-white">
+								Santi <br> Jomes
+							</div>
+						</div>							
+					</div>
+				</div>									
+			</div>	
+		</div>
+	</div>
+</div>	
+</template>	

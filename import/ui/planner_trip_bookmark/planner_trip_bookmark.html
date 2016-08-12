@@ -1,0 +1,146 @@
+<template name="planner_trip_bookmark">
+  <title>Planner Trip Bookmark</title>
+    <!-- Custom CSS -->
+
+
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+
+  <link href="planner_trip_bookmark/planner_trip_bookmark.css" rel="stylesheet">
+  <div class="all">
+  <!-- {{> banner}} -->
+
+<!--     <ul>
+      <li><a class="active">Itinerary</a></li>
+      <li><a>Map View</a></li>
+      <li><a>Trip Summary</a></li> 
+      <li><a>Bookmarks</a></li>
+    </ul> -->
+
+<div class="planertrip body">
+<div class="container">
+
+    <div class="box-post">
+        <div class="box-header place"><i class="fa fa-bookmark icons-bookmark" aria-hidden="true"></i><p class="font-century-gotchic top-header-bookmark-text"> Bookmarks (Singapore)</p></div>
+            <div class="box-overflow-event">
+                <div class="container box-event">
+                  <img src="placeholder_small_img1-118x118.png" class="img-responsive">
+                    <p class="a424A63 font-century-gotchic">Botanic Gardens</p>
+                    <i class="fa fa-university icons landmark-bookmark" aria-hidden="true"></i><p class="aD3DAE0-landmark-bookmark font-open-sans">Landmark</p>
+                    <p class="a2C353A-info font-open-sans">nature, green, musical</p>
+                </div>
+                <div class="container box-event">
+                  <img src="placeholder_small_img2-118x118.png" class="img-responsive">
+                    <p class="a424A63 font-century-gotchic">Universal Studio</p>
+                    <i class="fa fa-university icons landmark-bookmark" aria-hidden="true"></i><p class="aD3DAE0-landmark-bookmark font-open-sans">Landmark</p>
+                    <p class="a2C353A-info font-open-sans">Entertainment, fun, rides</p>
+                </div>
+                <div class="container box-event">
+                  <img src="placeholder_noimg_118x118.png" class="img-responsive">
+                    <p class="a424A63 font-century-gotchic">Blk 302 Food Center</p>
+                    <i class="fa fa-map-marker icons location-bookmark" aria-hidden="true"></i><p class="aD3DAE0-location-bookmark font-open-sans">Unofficial Location</p>
+                    <p class="a2C353A-info font-open-sans">Food, hawker</p>
+                </div>
+                <div class="container box-event">
+                  <img src="placeholder_noimg_118x118.png" class="img-responsive">
+                    <p class="a424A63 font-century-gotchic">KeKou Mian Blk 613</p>
+                    <i class="fa fa-map-marker icons location-bookmark" aria-hidden="true"></i><p class="aD3DAE0-location-bookmark font-open-sans">Unofficial Location</p>
+                    <p class="a2C353A-info font-open-sans">Food,noodle, hawker</p>
+                </div>
+                <div class="container box-event">
+                  <img src="placeholder_small_img4-118x118.png" class="img-responsive">
+                    <p class="a424A63 font-century-gotchic">Love Our Earth</p>
+                    <i class="fa fa-calendar icons event-bookmark" aria-hidden="true"></i><p class="aD3DAE0-event-bookmark">Official Event</p>
+                    <i class="fa fa-clock-o icons clock-bookmark" aria-hidden="true"></i><p class="a2C353A-clock font-open-sans">25 Jan, 2pm to 4pm</p>
+                    <i class="fa fa-map-marker icons location-bookmark earth" aria-hidden="true"></i><p class="a2C353A-location-bookmark earth font-open-sans">Sungai Wetlands</p>
+                </div>
+            </div>
+            <button class='box-btn-new-trip font-century-gotchic'> MANAGE BOOKMARKS </button>
+        </div>
+
+        <div class="box-post">
+        <div class="box-header date font-century-gotchic">Today, 9 Jan 2016</div>
+            <div class="box-overflow-event">
+                <div class="container box-event active-event">
+                  <img src="placeholder_img_attractions_3-118x118.png" class="img-responsive">
+                    <button class="icons-pencil"><i class="fa fa-pencil-square-o aria-hidden=true"></i></button>
+                    <p class="a424A63 font-century-gotchic">Shopaholics!</p>
+                    <button class="a424A63 button-date font-century-gotchic"><i class="fa fa-clock-o" aria-hidden="true"></i> 9AM - 10AM </button>
+                    <i class="fa fa-calendar icons event" aria-hidden="true"></i><p class="aD3DAE0-event font-open-sans">Event</p>
+                    <i class="fa fa-map-marker icons location" aria-hidden="true"></i><p class="a2C353A-location font-open-sans">Ion Orchard, Singapore</p>
+                    <i class="fa fa-envelope icons envelope" aria-hidden="true"></i><p class="aFF629F-message font-open-sans">5 new messages</p>
+                </div>
+                <div class="container box-event">
+                  <img src="placeholder_small_img2-118x118.png" class="img-responsive">
+                    <p class="a424A63 font-century-gotchic">Universal Studio</p>
+                    <button class="a424A63 button-date font-century-gotchic"><i class="fa fa-clock-o" aria-hidden="true"></i> 12PM - 2PM </button>
+                    <i class="fa fa-university icons landmark" aria-hidden="true"></i><p class="aD3DAE0-landmark font-open-sans">Landmark</p>
+                    <i class="fa fa-map-marker icons location" aria-hidden="true"></i><p class="a2C353A-location font-open-sans">Universal Studio</p>
+                </div>
+                <div class="container box-event">
+                  <img src="placeholder_noimg_118x118.png" class="img-responsive">
+                    <p class="a424A63 font-century-gotchic">Beer House</p>
+                    <button class="a424A63 button-date" font-century-gotchic><i class="fa fa-clock-o" aria-hidden="true"></i> 4PM - LATE     </button>
+                    <i class="fa fa-calendar icons event" aria-hidden="true"></i><p class="aD3DAE0-event font-open-sans">Event</p>
+                    <i class="fa fa-map-marker icons location" aria-hidden="true"></i><p class="a2C353A-location font-open-sans">Beer House, Singapore</p>
+                    <i class="fa fa-envelope icons envelope" aria-hidden="true"></i><p class="aFF629F-message font-open-sans">5 new messages</p>
+                </div>
+            </div>
+            <button class='box-btn-new-trip font-century-gotchic'> + ADD AN EVENT </button>
+        </div>
+        
+    <div class="box-post">
+        <div class="box-header date font-century-gotchic">Today, 10 Jan 2016</div>
+            <div class="box-overflow-event">
+                <div class="container box-event">
+                  <img src="placeholder_img_attractions_3-118x118.png" class="img-responsive">
+                    <p class="a424A63 font-century-gotchic">Shopaholics!</p>
+                    <button class="a424A63 button-date font-century-gotchic"><i class="fa fa-clock-o" aria-hidden="true"></i> 9AM - 10AM </button>
+                    <i class="fa fa-calendar icons event" aria-hidden="true"></i><p class="aD3DAE0-event font-open-sans">Event</p>
+                    <i class="fa fa-map-marker icons location" aria-hidden="true"></i><p class="a2C353A-location font-open-sans">Ion Orchard, Singapore</p>
+                    <i class="fa fa-envelope icons envelope" aria-hidden="true"></i><p class="aFF629F-message font-open-sans">5 new messages</p>
+                </div>
+                <div class="container box-event">
+                  <img src="placeholder_small_img2-118x118.png" class="img-responsive">
+                    <p class="a424A63 font-century-gotchic">Universal Studio</p>
+                    <button class="a424A63 button-date font-century-gotchic"><i class="fa fa-clock-o" aria-hidden="true"></i> 12PM - 2PM </button>
+                    <i class="fa fa-university icons landmark" aria-hidden="true"></i><p class="aD3DAE0-landmark font-open-sans">Landmark</p>
+                    <i class="fa fa-map-marker icons location" aria-hidden="true"></i><p class="a2C353A-location font-open-sans">Universal Studio</p>
+                </div>
+                <div class="container box-event">
+                  <img src="placeholder_noimg_118x118.png" class="img-responsive">
+                    <p class="a424A63 font-century-gotchic">Beer House</p>
+                    <button class="a424A63 button-date" font-century-gotchic><i class="fa fa-clock-o" aria-hidden="true"></i> 4PM - LATE </button>
+                    <i class="fa fa-calendar icons event" aria-hidden="true"></i><p class="aD3DAE0-event font-open-sans">Event</p>
+                    <i class="fa fa-map-marker icons location" aria-hidden="true"></i><p class="a2C353A-location font-open-sans">Beer House, Singapore</p>
+                    <i class="fa fa-envelope icons envelope" aria-hidden="true"></i><p class="aFF629F-message font-open-sans">5 new messages</p>
+                </div>
+                <div class="container box-event">
+                  <img src="placeholder_feed_img_5-118x118.png" class="img-responsive">
+                    <p class="a424A63 font-century-gotchic">Shopolics!</p>
+                    <button class="a424A63 button-date font-century-gotchic"><i class="fa fa-clock-o" aria-hidden="true"></i> 9AM - 10AM </button>
+                    <i class="fa fa-calendar icons event" aria-hidden="true"></i><p class="aD3DAE0-event font-open-sans">Event</p>
+                    <i class="fa fa-map-marker icons location" aria-hidden="true"></i><p class="a2C353A-location font-open-sans">Ion Orchard, Singapore</p>
+                    <i class="fa fa-envelope icons envelope" aria-hidden="true"></i><p class="aFF629F-message font-open-sans">5 new messages</p>
+                </div>
+                 <div class="container box-event">
+                  <img src="placeholder_noimg_118x118.png" class="img-responsive">
+                    <p class="a424A63 font-century-gotchic">Beer House</p>
+                    <button class="a424A63 button-date" font-century-gotchic><i class="fa fa-clock-o" aria-hidden="true"></i> 4PM - LATE </button>
+                    <i class="fa fa-calendar icons event" aria-hidden="true"></i><p class="aD3DAE0-event">Event</p>
+                    <i class="fa fa-map-marker icons location" aria-hidden="true"></i><p class="a2C353A-location font-open-sans">Beer House, Singapore</p>
+                    <i class="fa fa-envelope icons envelope" aria-hidden="true"></i><p class="aFF629F-message font-open-sans">5 new messages</p>
+                </div>
+                <div class="container box-event">
+                  <img src="placeholder_small_img2-118x118.png" class="img-responsive">
+                    <p class="a424A63 font-century-gotchic">Universal Studio</p>
+                    <button class="a424A63 button-date font-century-gotchic"><i class="fa fa-clock-o" aria-hidden="true"></i> 12PM - 2PM </button>
+                    <i class="fa fa-university icons landmark" aria-hidden="true"></i><p class="aD3DAE0-landmark font-open-sans">Landmark</p>
+                    <i class="fa fa-map-marker icons location" aria-hidden="true"></i><p class="a2C353A-location font-open-sans">Universal Studio</p>
+                </div>
+            </div>
+            <button class='box-btn-new-trip font-century-gotchic'> + ADD AN EVENT </button>
+        </div>
+</div>
+</div>
+</div>
+</template> 

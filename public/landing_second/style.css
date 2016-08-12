@@ -1,0 +1,344 @@
+
+
+.landing-row {
+	padding: 50px 0px 0px 0px;
+}
+.row-chat {
+	padding: 0px;
+}
+.row-top {
+	padding: 0px 0px 0px 0px;
+}
+.container.padding {
+	padding-right: 30px;
+	padding-left: 30px;
+}
+.nav.nav-banner > li > a {
+    display: block;
+    padding: 10px 0px 10px 10px;
+}
+.left-tab {
+	float: right;
+	padding-right: 10px;
+}
+.font-weight {
+	font-weight: bold;
+}
+.font-weight.color-gray {
+	font-size: 13px;
+	top: 10px;
+}
+.position {
+	position: relative;
+}
+
+.btn-travel-guide {
+	width: 180px;
+	height: 45px;
+	top: 115px;
+	left: 42%;
+}
+.color {
+	color: #B8B8B8;
+}
+.box-post img {
+  object-fit: cover;
+  object-position: center;
+}
+/*BOX FOR POST*/
+.box-messenger,.box-group,.box-detail-group,.box-friend,.box-detail-friend {
+	width: 206px;
+}
+.nav.nav-banner > li > a,.padding-groups,.padding-message,.icon-commenting,.font-size-detail,.padding-font-image,.font-size-small,
+.padding-font-small,.image-messenger,.travel-guide,.location {
+	position: relative;
+}
+.btn-travel-guide {
+	position: absolute;
+}
+/*REQUEST JOIN IN LANDING*/
+.navbar-br {
+	margin : 5px;
+}
+<<<<<<< HEAD
+
+=======
+.get-ticket-btn {
+	float: right;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+.icon-padding {
+	right: 20px;
+	margin-right: 125px;
+	top: 26px;
+}
+>>>>>>> 2a0798b2266b04ff00a721e0725453e2af6b7d02
+.icon-padding-center {
+	left: 51%;
+}
+.button-center {
+	left: 50%;
+}
+.position-right {
+	float: right;
+	left: 4px;
+}
+.box-messenger {
+	background-color: #FF629F;
+	font-weight: bold;
+	font-size: 13px;
+	color: #FFF;
+	height: 44px;
+}
+.icon-commenting {
+	font-size: 20px;
+	top: 10px;
+	left: 20px;
+}
+.padding-message {
+	top: 10px;
+	left: 25%;
+}
+.padding-groups {
+	top: 8px;
+	left: 40%;
+}
+.box-group {
+	background-color: #F4F8FB;
+	font-size: 13px;
+	color: #424A63;
+	height: 36px;
+	top: 90px;
+}
+.box-detail-group {
+	background-color: #FFF;
+	height: 150px;
+	top: 125px;
+}
+.box-group.box-friend {
+	background-color: #F4F8FB;
+	height: 36px;
+	top: 270px;
+}
+.box-detail-friend {
+	height: 500px;
+	background-color: #FFF;
+	top: 305px;
+}
+.font-size-detail {
+	font-size: 12px;
+}
+.padding-font-detail {
+	padding-left: 25px;
+	top: 10px;
+}
+.padding-font-image {
+	left: 60px;
+	top: -10px;
+}
+.font-size-small {
+	font-size: 10px;
+	padding-left: 25px;
+	top: 4px;
+}
+.padding-font-small {
+	left: -25px;
+	top: 3px;
+}
+.font-size-small.pink {
+	color: #FF629F;
+}
+.image-messenger {
+	height: 32px;
+	width: 32px;
+	border-color: #FFF;
+	border-radius: 50%;
+	top: 20px;
+	left: 20px;
+}
+.icon-btn {
+	left: 51%;
+}
+.navbar-default.color {
+	background-color: transparent;
+}
+.plain-button.pink.center > i {
+	margin-left: -30px;
+	color: #FF629F;
+}
+.btn-center-padding-top {
+	padding-top: 10px;
+}	
+.div-btn {
+	width: 200px;
+  	height: 40px;
+  	float: right;
+	position: relative;
+}
+.div-icon,.div-icon-chat {
+	width: 45px;
+	height: 45px;
+	position: relative;
+	left: 200px;
+	float: right;
+}
+.div-btn-cntr {
+	top: 110px;
+	width: 100%;
+	height: auto;
+	position: absolute;
+}
+.div-icon-cntr {
+	width: 100%;
+	height: auto;
+	position: relative;
+	top: 14px;
+	left: 10px;
+}
+
+@media screen and (max-width: 1000px){
+    .color-white .font-text {
+    	font-size: 30px;
+    }
+    .color-white .font-text-date {
+		font-size: 20px;
+	}
+	.color-white .font-text-weather {
+		font-size: 16px;
+	}
+    .font-comment {
+    	padding: 1.5% 0% 0% 10%;
+    }
+    .font-weight.font-save-location {
+    	padding: 1.5% 0% 0% 80%;
+    }
+	.box-btn-post {
+	    float: left;
+	    position: absolute;
+	    margin-left: -0px;
+	}
+	.row-margin-right {
+		margin-right: 0px;
+	}
+	.box-messenger,.box-group,.box-detail-group,.box-friend,.box-detail-friend {
+		width: 100%;
+	}
+	.padding-message {
+		left: 35%;
+	}
+	.div-icon,.div-icon-chat {
+		left: 200px;
+	}	
+}
+@media screen and (max-width: 360px) {
+    .color-white .font-text {
+    	font-size: 25px;
+    }
+    .color-white .font-text-date {
+		font-size: 18px;
+	}
+	.color-white .font-text-weather {
+		font-size: 14px;
+	}     
+    .font-comment {
+    	font-size: 11px;
+    	padding: 3.5% 0% 0% 10%;
+    }
+	.font-weight.font-save-location {
+		font-size: 12px;
+		padding: 3.5% 0% 0% 60%;
+	}
+	.font-plan {
+		font-size: 25px;
+	}
+    .nav-right {
+    	float: right;
+    }
+	.plain-button.pink.center > i {
+		margin-left: -17px;
+		color: #FF629F;
+		width: 30px;
+		height: 30px;
+		font-size: 12px;
+	}  
+	.row-margin-right {
+		margin-right: 0px;
+	}		
+	.box-messenger,.box-group,.box-detail-group,.box-friend,.box-detail-friend {
+		width: 100%;
+	}	
+	.time {
+		left: -127px;
+		top: 20px;
+	}
+	.space {
+		left: -135px;
+		top: 20px;
+	}
+	.div-icon,.div-icon-chat {
+		left: 38px !important;
+		top: -40px;
+	}
+	.icon.border-pink {
+	    width: 25px;
+	    height: 25px;
+	    padding: 0px;
+	    font-size: 18px !important;
+	    left: 165px;
+	    top: 67px;
+	}		
+	.div-icon-cntr {
+		top: -23px !important;
+		left: 0px !important;
+	}		
+}
+@media screen and (max-width: 335px) {
+	.div-icon {
+		left: -162px !important;
+		top: -80px;
+	}
+	.div-icon-chat {
+		left: 38px !important;
+		top: -41px;
+	}		
+	.icon.border-pink {
+	    width: 25px;
+	    height: 25px;
+	    padding: 0px;
+	    font-size: 18px !important;
+	    left: 165px;
+	    top: 67px;
+	}	
+	.div-icon-cntr {
+		top: -23px !important;
+		left: -18px !important;
+	}				
+}
+
+@media screen and (max-width: 767px){
+    .plain-button.pink {
+        width: 130px;
+        height: 40px;
+        font-size: 12px;
+    }
+    .icon.border-pink {
+    	width: 25px;
+    	height: 25px;
+        padding: 0px;
+        font-size: 18px !important;    	
+    }
+    .font-plan {
+    	font-size: 25px;
+    }	
+	.box-messenger,.box-group,.box-detail-group,.box-friend,.box-detail-friend {
+		width: 100%;
+	}    
+	.div-icon,.div-icon-chat {
+		left: 238px;
+	}
+	.div-icon-cntr {
+		top: 43px;
+		left: 33px;
+	}	
+}

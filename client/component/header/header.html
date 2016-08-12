@@ -1,0 +1,30 @@
+<template name="header">
+    <nav id="main-header" class="navbar navbar-default nav-padding">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed header-collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand logo-top" href="#"><img width="153" height="40" src="logo_landing_239x47.png"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-menu">
+            <li><a class="{{#if currentRoute 'explore'}}actived{{/if}}" href="/explore">Explore</a></li>
+            <li><a class="{{#if currentRoute 'mytrip'}}actived{{/if}}" href="#" data-toggle="modal" data-target="#mytrip">My Trip</a></li>
+            <li><a class="{{#if currentRoute 'travelguide'}}actived{{/if}}" href="#" data-toggle="modal" data-target="#travel_guide">Travel Guide</a></li>                       
+            <li><a class="{{#if currentRoute 'travelogue'}}actived{{/if}}" href="travelogue">My Travelogue</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="li-image"><a href="#"><img class="image-header" src="icon_landing_chat_36x36.png"></a></li>
+            <li class="li-image"><a href="#"><img class="image-header" src="avatar_travelogue_120x120.png"></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {{> Template.dynamic template=sub_header}}
+    {{> travelguide}}
+    {{> mytrip}}
+</template> 

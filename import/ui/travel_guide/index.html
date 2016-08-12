@@ -1,0 +1,1342 @@
+<template name="travelguide">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="travel_guide/css/travel_guide.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+ 
+  <div class="container">
+      <!-- Modal -->
+      <div class="modal fade" id="travel_guide" role="dialog">
+        <div class="modal-dialog tg-modal-dialog">
+          <div class="modal-content tg-modal-content">
+
+          <!-- Header -->
+            <div class="modal-header text-center tg-modal-header font-century-gothic">
+
+              <!-- Header Content -->
+              <div class="tg-header-button text-center">
+                <button class="plain-button">Plan trip now</button>
+              </div>
+              
+              <div class="tg-close-button">
+                <a href="#" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true"></i></a>
+              </div>
+
+              <img src="placeholders/Singapore.png" class="tg-header-image" alt="placeholder_img_attractions_6.png"/>
+              <p class="tg-header-logo">SINGAPORE</p>
+              <p class="tg-mercury"><i class="fa fa-sun-o"></i> <b>Sunny 28-35° C</b></p>
+
+               <!-- Tabs --> 
+              <ul class="nav nav-tabs tg-nav-tabs font-century-gothic">
+                <li id="tg-search-button"><a href="#tg-search" data-toggle="tab"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                <li><a href="#tg-feed" data-toggle="tab"><i class="fa fa-rss" aria-hidden="true"></i><b>Feeds</b></a></li>
+                <li><a href="#tg-overview" data-toggle="tab"><i class="fa fa-info-circle" aria-hidden="true"></i><b>Overview</b></a></li>
+                <li><a href="#tg-food" data-toggle="tab"><i class="fa fa-cutlery" aria-hidden="true"></i><b>Food</b></a></li>
+                <li><a href="#tg-lodging" data-toggle="tab"><i class="fa fa-bed" aria-hidden="true"></i><b>Lodging</b></a></li>
+                <li><a href="#tg-attraction" data-toggle="tab"><i class="fa fa-camera" aria-hidden="true"></i><b> Attraction</b></a></li>
+                <li><a href="#tg-event" data-toggle="tab"><i class="fa fa-calendar" aria-hidden="true"></i><b>Events</b></a></li>
+              </ul>
+             
+            </div><!-- Modal Header Close -->
+
+            <!-- Modal Body -->
+          <div class="modal-body tg-modal-body">
+
+            <!-- Tab Content -->
+            <div class="tab-content">
+
+              <!-- Tab Search Content -->
+              <div id="tg-search" class="tab-pane fade">
+                Search
+              </div><!-- Tab Search Content Close -->
+
+              <!-- Tab Feed Content -->
+            <div id="tg-feed" class="tab-pane fade">
+                <div class="row tg-row">
+                    <div class="col-md-9 br-between-nav">
+                        <div class="tg-review-description-title tgf-feeds-title">
+                            <p><b class="font-open-sans">Singapore Travelogues</b></p>
+                        </div>
+                        <br class="br-between-border">
+                        <div class="main-posts">
+                            <div class="blog-masonry masonry-true">
+                                <div class="post-masonry col-md-6 tgf-padding-right">
+                                    <div class="box-post font-open-sans tgf-padding-top">
+                                        <div class="div-box-image-travel">
+                                            <img src="placeholders/placeholder_feed_img_2.png" class="image-post">
+                                        </div>
+                                        <div class="div-box-profil-name-time">
+                                            <img src="placeholders/avatar_10.png" class="img-responsive profil-size image-profil">
+                                            <p class="font-profil-name color-white"><b>Audrey Tan</b></p>
+                                            <p class="font-time color-black">
+                                            <i class="fa fa-map-marker"></i><span class="space-between">Sentosa Silo Beach</span> 
+                                            <i class="fa fa-clock-o space"></i><span class="time">Today</span>
+                                            </p> 
+                                        </div>
+                                        <div class="div-box-text">
+                                            <p class="font-status">
+                                                Aenean sed dapibus lacus.ALiquam orci urna, mattis varius leo non, malesuada faucibus eros. proin eget nulla nulla.<br>
+                                                Nullam eu iaculis is erat. In eruismode pulvinar odio!
+                                            </p>    
+                                        </div> 
+                                        <div class="box-post-bottom font-century-gothic">
+                                            <b><p class="font-comment">
+                                            <a href="#" class="color-gray">
+                                            <i class="fa fa-heart-o"></i></a>
+                                            <b class="color-gray space-icon">53</b> 
+                                            <a href="#" class="color-gray">
+                                            <i class="fa fa-comment-o space-text"></i></a>
+                                            <b class="color-gray space-comment">12</b>
+                                            </p></b>
+                                            <a href="#" class="font-open-sans color-save"><p class="font-weight font-save-location"><i class="fa fa-circle-o"> <b>Save Location</b> </i></p></a>
+                                        </div>                                              
+                                    </div>              
+                                </div>
+                            </div>                                                               
+                            <div class="blog-masonry masonry-true">
+                                <div class="post-masonry col-md-6 tgf-padding-right">
+                                    <div class="box-post font-open-sans tgf-padding-top">
+                                        <div class="div-box-image-travel">
+                                            <img src="placeholders/placeholder_feed_img_1.png" class="image-post">
+                                        </div>
+                                        <div class="div-box-profil-name-time">
+                                            <img src="placeholders/avatar_2.png" class="img-responsive profil-size image-profil">
+                                            <p class="font-profil-name color-white"><b>Gwen June</b></p>
+                                            <p class="font-time color-black">
+                                            <i class="fa fa-map-marker"></i><span class="space-between">Tree Top Walk</span> 
+                                            <i class="fa fa-clock-o space"></i><span class="time">Today</span>
+                                            </p> 
+                                        </div>
+                                        <div class="div-box-text">
+                                            <p class="font-status">
+                                                Aenean sed dapibus lacus.ALiquam orci urna, mattis varius leo non, malesuada faucibus eros. proin eget nulla nulla.<br>
+                                                Nullam eu iaculis is erat. In eruismode pulvinar odio!
+                                                <br>
+                                                Aenean sed dapibus lacus.ALiquam orci urna, mattis varius leo non, malesuada faucibus eros. proin eget nulla nulla.<br>
+                                                Nullam eu iaculis is erat. In eruismode pulvinar odio!                                            
+                                            </p>    
+                                        </div> 
+                                        <div class="box-post-bottom font-century-gothic">
+                                            <b><p class="font-comment">
+                                            <a href="#" class="color-gray">
+                                            <i class="fa fa-heart-o"></i></a>
+                                            <b class="color-gray space-icon">53</b> 
+                                            <a href="#" class="color-gray">
+                                            <i class="fa fa-comment-o space-text"></i></a>
+                                            <b class="color-gray space-comment">12</b>
+                                            </p></b>
+                                            <a href="#" class="font-open-sans color-save"><p class="font-weight font-save-location"><i class="fa fa-circle-o"> <b>Save Location</b> </i></p></a>
+                                        </div>                                              
+                                    </div>              
+                                </div>
+                            </div>              
+                            <div class="blog-masonry masonry-true">
+                                <div class="post-masonry col-md-6 tgf-padding-right">
+                                    <div class="box-post font-open-sans tgf-padding-top">
+                                        <div class="div-box-image-travel">
+                                            <img src="placeholders/placeholder_feed_img_3.png" class="image-post">
+                                        </div>
+                                        <div class="div-box-profil-name-time">
+                                            <img src="placeholders/avatar_4.png" class="img-responsive profil-size image-profil">
+                                            <p class="font-profil-name color-white"><b>Jack Wee</b></p>
+                                            <p class="font-time color-black">
+                                            <i class="fa fa-map-marker"></i><span class="space-between">Orchard ION</span> 
+                                            <i class="fa fa-clock-o space"></i><span class="time">Today</span>
+                                            </p> 
+                                        </div>
+                                        <div class="div-box-text">
+                                            <p class="font-status">
+                                                Aenean sed dapibus lacus.ALiquam orci urna, mattis varius leo non, malesuada faucibus eros. proin eget nulla nulla.<br>
+                                                Nullam eu iaculis is erat. In eruismode pulvinar odio!
+                                            </p>    
+                                        </div> 
+                                        <div class="box-post-bottom font-century-gothic">
+                                            <b><p class="font-comment">
+                                            <a href="#" class="color-gray">
+                                            <i class="fa fa-heart-o"></i></a>
+                                            <b class="color-gray space-icon">53</b> 
+                                            <a href="#" class="color-gray">
+                                            <i class="fa fa-comment-o space-text"></i></a>
+                                            <b class="color-gray space-comment">12</b>
+                                            </p></b>
+                                            <a href="#" class="font-open-sans color-save"><p class="font-weight font-save-location"><i class="fa fa-circle-o"> <b>Save Location</b> </i></p></a>
+                                        </div>                                              
+                                    </div>              
+                                </div>
+                            </div> 
+                            <div class="blog-masonry masonry-true">
+                                <div class="post-masonry col-md-6 tgf-padding-right">
+                                    <div class="box-post font-open-sans tgf-padding-top">
+                                        <div class="div-box-image-travel">
+                                            <img src="placeholders/placeholder_feed_img_5.png" class="image-post">
+                                        </div>
+                                        <div class="div-box-profil-name-time">
+                                            <img src="placeholders/avatar_10.png" class="img-responsive profil-size image-profil">
+                                            <p class="font-profil-name color-white"><b>Audrey Tan</b></p>
+                                            <p class="font-time color-black">
+                                            <i class="fa fa-map-marker"></i><span class="space-between">Sentosa Silo Beach</span> 
+                                            <i class="fa fa-clock-o space"></i><span class="time">Today</span>
+                                            </p> 
+                                        </div>
+                                        <div class="div-box-text">
+                                            <p class="font-status">
+                                                Aenean sed dapibus lacus.ALiquam orci urna, mattis varius leo non, malesuada faucibus eros. proin eget nulla nulla.<br>
+                                                Nullam eu iaculis is erat. In eruismode pulvinar odio!
+                                            </p>    
+                                        </div> 
+                                        <div class="box-post-bottom font-century-gothic">
+                                            <b><p class="font-comment">
+                                            <a href="#" class="color-gray">
+                                            <i class="fa fa-heart-o"></i></a>
+                                            <b class="color-gray space-icon">53</b> 
+                                            <a href="#" class="color-gray">
+                                            <i class="fa fa-comment-o space-text"></i></a>
+                                            <b class="color-gray space-comment">12</b>
+                                            </p></b>
+                                            <a href="#" class="font-open-sans color-save"><p class="font-weight font-save-location"><i class="fa fa-circle-o"> <b>Save Location</b> </i></p></a>
+                                        </div>                                              
+                                    </div>              
+                                </div>
+                            </div> 
+                        </div> 
+                    </div>
+                    <div class="col-md-3 col-xs-42 br-between-nav">
+                        <div class="tg-review-description-title tgf-feeds-travellers">
+                            <p><b class="font-open-sans">Travellers in Singapore now</b></p>
+                        </div>
+                        <br class="br-between-border">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-top">
+                                <img src="placeholders/avatar_1.png" class="tgf-profil-travellers">
+                            </div>
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-left padding-top">
+                                <img src="placeholders/avatar_2.png" class="tgf-profil-travellers">
+                            </div>
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-left-box2 padding-top">
+                                <img src="placeholders/avatar_3.png" class="tgf-profil-travellers">
+                            </div>                                 
+
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-top">
+                                <img src="placeholders/avatar_4.png" class="tgf-profil-travellers">
+                            </div>
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-left tgf-padding-top">
+                                <img src="placeholders/avatar_5.png" class="tgf-profil-travellers">
+                            </div>
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-left-box2 tgf-padding-top">
+                                <img src="placeholders/avatar_6.png" class="tgf-profil-travellers">
+                            </div>                                 
+
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-top">
+                                <img src="placeholders/avatar_7.png" class="tgf-profil-travellers">
+                            </div>
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-left tgf-padding-top">
+                                <img src="placeholders/avatar_8.png" class="tgf-profil-travellers">
+                            </div>
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-left-box2 tgf-padding-top">
+                                <img src="placeholders/avatar_9.png" class="tgf-profil-travellers">
+                            </div>                                 
+
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-top">
+                                <img src="placeholders/avatar_1.png" class="tgf-profil-travellers">
+                            </div>
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-left tgf-padding-top">
+                                <img src="placeholders/avatar_2.png" class="tgf-profil-travellers">
+                            </div>
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-left-box2 tgf-padding-top">
+                                <img src="placeholders/avatar_3.png" class="tgf-profil-travellers">
+                            </div>                                 
+
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-top">
+                                <img src="placeholders/avatar_4.png" class="tgf-profil-travellers">
+                            </div>
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-left tgf-padding-top">
+                                <img src="placeholders/avatar_5.png" class="tgf-profil-travellers">
+                            </div>
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-left-box2 tgf-padding-top">
+                                <img src="placeholders/avatar_6.png" class="tgf-profil-travellers">
+                            </div>      
+
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-top">
+                                <img src="placeholders/avatar_7.png" class="tgf-profil-travellers">
+                            </div>
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-left tgf-padding-top">
+                                <img src="placeholders/avatar_8.png" class="tgf-profil-travellers">
+                            </div>
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-left-box2 tgf-padding-top">
+                                <img src="placeholders/avatar_9.png" class="tgf-profil-travellers">
+                            </div>                                 
+
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-top">
+                                <img src="placeholders/avatar_1.png" class="tgf-profil-travellers">
+                            </div>
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-left tgf-padding-top">
+                                <img src="placeholders/avatar_2.png" class="tgf-profil-travellers">
+                            </div>
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-left-box2 tgf-padding-top">
+                                <img src="placeholders/avatar_3.png" class="tgf-profil-travellers">
+                            </div>                                 
+
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-top">
+                                <img src="placeholders/avatar_4.png" class="tgf-profil-travellers">
+                            </div>
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-left tgf-padding-top">
+                                <img src="placeholders/avatar_5.png" class="tgf-profil-travellers">
+                            </div>
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-left-box2 tgf-padding-top">
+                                <img src="placeholders/avatar_6.png" class="tgf-profil-travellers">
+                            </div>                                 
+
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-top">
+                                <img src="placeholders/avatar_7.png" class="tgf-profil-travellers">
+                            </div>
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-left tgf-padding-top">
+                                <img src="placeholders/avatar_8.png" class="tgf-profil-travellers">
+                            </div>
+                            <div class="col-md-4 col-sm-2 col-xs-4 tgf-padding-left-box2 tgf-padding-top">
+                                <img src="placeholders/avatar_9.png" class="tgf-profil-travellers">
+                            </div>                                 
+                        </div>            
+                    </div>    
+                </div>                                                                                 
+            </div><!-- Tab Feed Content Close -->
+
+              <!-- Tab Overview Content -->
+              <div id="tg-overview" class="tab-pane fade">
+                <!-- Row Open -->
+                <div class="row tg-row">
+
+                  <!-- Review Description -->
+                  <div class="tg-review-description col-sm-4 col-md-4 font-open-sans">
+
+                    <!-- Review Description Title-->
+                    <div class="tg-review-description-title">
+                      <p><b>SINGAPORE</b></p>
+                    </div><!-- Review Description Title Close -->
+
+                    <!-- Row Map -->
+                    <div class="tg-row-map">
+                      <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:140px;width:263px;'><div id='gmap_canvas' style='height:140px;width:263px;'></div><div><small><a href="http://embedgooglemaps.com">                  embed google maps             </a></small></div><div><small><a href="https://top10geeks.com/top-10-best-running-shoes-men-2016/">top 10 running shoes for men</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(1.3825495810702986,103.85053924659346),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(1.3825495810702986,103.85053924659346)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>Singapore<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script> 
+                    </div><!-- Row Map Close -->
+
+                    <!-- Row Description -->
+                    <div class="tg-row-description tgo-row-description">
+                      <p id="tg-title"><b>About</b></p>
+                      <p id="tg-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Cras posuere sagittis dui ei pharetra.Donec vehicula nuns sit amet purus accumsan, ut molestie urna dignissim.cras gravida ex justo, a condimentum ipsum elementum sit amet. Sed nulla arcu,hendrehit sed tellus in.</p><br>
+
+                      <p id="tg-description">maximus effictur tortor.Vestibulum turpis a ipsum commodo alquan.Morbi vehicuka velit at bibendum maximus.</p>
+                    </div><!-- Row Description Close -->
+
+                    <!-- Row Detail -->
+                    <div class="tg-row-detail">
+
+                      <div class="row">
+                        <div class="col-xs-5 col-sm-5 col-md-5">
+                          <b>Weather</b>
+                        </div>
+                        <div class="col-xs-7 col-sm-7 col-md-7">
+                          <p>28°C/68°f</p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-xs-5 col-sm-5 col-md-5">
+                          <b>Local Time</b>
+                        </div>
+                        <div class="col-xs-7 col-sm-7 col-md-7">
+                           <p>Mon,6:23 pm</p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-xs-5 col-sm-5 col-md-5">
+                          <b>Internet</b>
+                        </div>
+                        <div class="col-xs-7 col-sm-7 col-md-7">
+                          <p>100 - 200mb/s</p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-xs-5 col-sm-5 col-md-5">
+                          <b>Languages</b>
+                        </div>
+                        <div class="col-xs-7 col-sm-7 col-md-7">
+                          <p>English, Mandarin, Bahasa, Tamil</p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-xs-5 col-sm-5 col-md-5">
+                          <b>Nightlife</b>
+                        </div>
+                        <div class="col-xs-7 col-sm-7 col-md-7">
+                          <p>Excellent</p>
+                        </div>
+                      </div>
+
+                    </div><!-- Row Detail Close -->
+
+                    <div class="tg-row-button font-open-sans tgo-row-button"><!-- Row Button -->
+                      <button class="plain-button second-plain-button tg-plan-trip-now-btn tgo-plan-trip-now-btn"><b>Plan trip now</b></button>
+                      <button class="plain-button second-plain-button tg-get-ticket-btn tgo-get-ticket-btn"><i class="fa fa-plane icon"></i><b>Get Tickets</b></button>
+                    </div><!-- Row Button Close -->
+
+                  </div><!-- Review Description Close -->
+                      
+                  <!-- Review Box -->
+                  <div class="tg-review-box col-sm-8 col-md-8 font-open-sans">
+
+                    <!-- Row Tabs -->
+                    <div class="tg-row-tabs">
+
+                      <div class="tg-review-title">
+                        <b>Reviews</b><small>(20421)</small>
+                      </div> 
+
+                      <ul class="nav nav-pills tg-nav-pills">
+                        <li><a href="">English  <i class="fa fa-chevron-down" aria-hidden="true"></i></a></li>
+                        <li><a href="">Latest  <i class="fa fa-chevron-down" aria-hidden="true"></i></a></li>
+                      </ul>
+
+                    </div><!-- Row Tabs Close -->
+
+                    <!-- Row Box -->
+                    <div class="tg-row-box">
+
+                      <!-- First Content -->
+                      <div class="row tg-row-content">
+                        <div class="row tg-row-picture col-xs-3 col-sm-3 col-md-3 text-center">
+                          <img id="tg-profile-picture" src="placeholders/avatar_10.png"><br> 
+                          <p id="tg-name" class="font-century-gothic"><b>Audrey Tan</b></p>
+                          <p id="tg-origin">From Singapore</p>
+                        </div>
+                        
+                        <div class="row tg-row-rating col-xs-3 col-sm-9 col-md-9">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                          <p id="tg-message">Aenean sed dapibus lacus.Aliquam orci urna, mattis varius leo non ,malesuada faucibus eros.Proin eget nulla nulla.Nuliam eu laculis erat.In euismod pulvinar odio</p>
+                          <p id="tg-dateTime">12/06/2016, 14:20</p>
+                        </div>
+                      </div>
+
+                        <!-- Second Content -->
+                       <div class="row tg-row-content">
+                        <div class="row tg-row-picture col-xs-3 col-sm-3 col-md-3 text-center">
+                          <img id="tg-profile-picture" src="placeholders/avatar_1.png"><br> 
+                          <p id="tg-name" class="font-century-gothic"><b>Valerie.Mel</b></p>
+                          <p id="tg-origin">From London</p>
+                        </div>
+                        
+                        <div class="row tg-row-rating col-xs-9 col-sm-9 col-md-9">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <p id="tg-message">Aenean sed dapibus lacus.Aliquam orci urna, mattis varius leo non ,malesuada faucibus eros.Proin eget nulla nulla.Nuliam eu laculis erat.In euismod pulvinar odio</p>
+                          <p id="tg-dateTime">12/06/2016, 14:20</p>
+                        </div>
+                      </div>
+
+                        <!-- Third Content -->
+                       <div class="row tg-row-content">
+                        <div class="row tg-row-picture col-xs-3 col-sm-3 col-md-3 text-center">
+                          <img id="tg-profile-picture" src="avatar_landing_36x36.png"><br> 
+                          <p id="tg-name" class="font-century-gothic"><b>Janet Travels</b></p>
+                          <p id="tg-origin">From Australia</p>
+                        </div>
+                        
+                        <div class="row tg-row-rating col-xs-9 col-sm-9 col-md-9">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <p id="tg-message">Aenean sed dapibus lacus.Aliquam orci urna, mattis varius leo non ,malesuada faucibus eros.Proin eget nulla nulla.Nuliam eu laculis erat.In euismod pulvinar odio</p>
+                          <p id="tg-dateTime">12/06/2016, 14:20</p>
+                        </div>
+                      </div>
+
+                      <!-- Fourth Content -->
+                      <div class="row tg-row-content">
+                        <div class="row tg-row-picture col-xs-3 col-sm-3 col-md-3 text-center">
+                          <img id="tg-profile-picture" src="placeholders/avatar_10.png"><br> 
+                          <p id="tg-name" class="font-century-gothic"><b>Audrey Tan</b></p>
+                          <p id="tg-origin">From Singapore</p>
+                        </div>
+                        
+                        <div class="row tg-row-rating col-xs-9 col-sm-9 col-md-9">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star-o"></i>
+                          <p id="tg-message">Aenean sed dapibus lacus.Aliquam orci urna, mattis varius leo non ,malesuada faucibus eros.Proin eget nulla nulla.Nuliam eu laculis erat.In euismod pulvinar odio</p>
+                          <p id="tg-dateTime">12/06/2016, 14:20</p>
+                        </div>
+                      </div>
+
+                      <!-- Fifth Content -->
+                      <div class="row tg-row-content">
+                        <div class="row tg-row-picture col-xs-3 col-sm-3 col-md-3 text-center">
+                          <img id="tg-profile-picture" src="placeholders/avatar_1.png"><br> 
+                          <p id="tg-name" class="font-century-gothic"><b>Valerie.Mel</b></p>
+                          <p id="tg-origin">From London</p>
+                        </div>
+                        
+                        <div class="row tg-row-rating col-xs-9 col-sm-9 col-md-9">
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <i class="fa fa-star"></i>
+                          <p id="tg-message">Aenean sed dapibus lacus.Aliquam orci urna, mattis varius leo non ,malesuada faucibus eros.Proin eget nulla nulla.Nuliam eu laculis erat.In euismod pulvinar odio</p>
+                          <p id="tg-dateTime">12/06/2016, 14:20</p>
+                        </div>
+                      </div>
+
+                    </div><!-- Row Box Close -->
+                  </div><!-- Review Box Close -->
+
+                </div><!-- Row Close -->
+
+              </div><!-- Tab Overview Content Close -->
+
+              <!-- Tab Food Content -->
+              <div id="tg-food" class="tab-pane fade">
+                Food
+              </div><!-- Tab Food Content Close -->
+
+              <!-- Tab Lodging Content -->
+              <div id="tg-lodging" class="tab-pane fade">
+                Lodging
+              </div><!-- Tab Lodging Content Close -->
+
+              <!-- Tab Attraction Content -->
+              <div id="tg-attraction" class="tab-pane fade">
+
+                <!-- Row Open -->
+                <div class="row tg-row">
+                  
+                  <!-- Review Description -->
+                  <div class="tg-review-description col-sm-4 col-md-4 font-open-sans">
+
+                    <!-- Review Description Title -->
+                    <div class="tg-review-description-title">
+                      <p><b><i class="fa fa-arrow-left"></i>  GARDENS BY THE BAY</b></p>
+                    </div><!-- Review Description Title Close -->
+
+                    <!-- Row Logo -->
+                    <div class="tg-row-logo">
+                      <img src="img_attraction_215x251.png"/>
+                    </div><!-- Row Logo Close -->
+
+                    <!-- Row Description -->
+                    <div class="tg-row-description">
+                      <p id="tg-title" class="font-open-sans"><b>About</b></p>
+                      <p id="tg-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Cras posuere sagittis dui ei pharetra.Donec vehicula nuns sit amet purus accumsan, ut molestie urna dignissim.cras gravida ex justo, a condimentum ipsum elementum sit amet.</p>
+                    </div><!-- Row Description Close -->
+
+                    <!-- Row Map -->
+                    <div class="tg-row-map">
+                      <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div style='overflow:hidden;height:140px;width:263px;'><div id='gmap_canvas' style='height:140px;width:263px;'></div><div><small><a href="http://embedgooglemaps.com">                  embed google maps             </a></small></div><div><small><a href="https://top10geeks.com/top-10-best-running-shoes-men-2016/">top 10 running shoes for men</a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(1.3825495810702986,103.85053924659346),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(1.3825495810702986,103.85053924659346)});infowindow = new google.maps.InfoWindow({content:'<strong>Title</strong><br>Singapore<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script> 
+                    </div><!-- Row Map Close -->
+
+                    <!-- Row Mini Picture -->
+                    <div class="row tg-row-mini-picture img-responsive">
+
+                      <div class="tg-mini-picture col-xs-4 col-sm-4 col-md-4">
+                        <img src="placeholders/placeholder_detail_img1.png"/>
+                      </div>
+
+                      <div class="tg-mini-picture col-xs-4 col-sm-4 col-md-4">
+                        <img src="placeholders/placeholder_detail_img2.png"/>
+                      </div>
+
+                      <div class="tg-mini-picture col-xs-4 col-sm-4 col-md-4">
+                        <img src="placeholders/placeholder_detail_img3.png"/>
+                      </div>
+
+                    </div><!-- Row Mini Picture -->
+
+                    <!-- Row Detail -->
+                    <div class="tg-row-detail">
+
+                      <div class="row">
+                        <div class="col-xs-5 col-sm-5 col-md-5">
+                          <b>Opening <br> Hours</b>
+                        </div>
+                        <div class="col-xs-7 col-sm-7 col-md-7">
+                          <p>
+                            Mon - Fri 9am - 8pm <br>
+                            Sat - Sun & Pub <br> 
+                            10am - 6pm
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-xs-5 col-sm-5 col-md-5">
+                          <b>Pricing</b>
+                        </div>
+                        <div class="col-xs-7 col-sm-7 col-md-7">
+                          <p>
+                            Child - Free of Charge <br>
+                            Adult - $10 <br>
+                            Senior - Free of Charge
+                          </p>
+                        </div>
+                      </div>
+
+                    </div><!-- Row Detail Close -->
+
+                    <div class="tg-row-button"><!-- Row Button -->
+                      <button class="plain-button second-plain-button tg-bookmark-btn tgas-bookmark-btn font-open-sans"><i class="fa fa-bookmark-o icon"></i><b> Add to Bookmark</b></button>
+                      <button class="plain-button second-plain-button tg-get-ticket-btn tgas-get-ticket-btn font-open-sans"><i class="fa fa-ticket icon"></i><b> Get Tickets</b></button>
+                    </div><!-- Row Button Close -->
+
+                  </div><!-- Review Description Close -->
+                  
+                  <!-- Review Box -->
+                  <div class="tg-review-box col-sm-8 col-md-8 font-open-sans">
+
+                    <!-- Row Tabs -->
+                    <div class="tg-row-tabs">
+
+                      <div class="tg-review-title">
+                        <b>Reviews</b>
+                      </div> 
+
+                      <ul class="nav nav-pills tg-nav-pills">
+                        <li><a href="">English  <i class="fa fa-chevron-down" aria-hidden="true"></i></a></li>
+                        <li><a href="">Latest  <i class="fa fa-chevron-down" aria-hidden="true"></i></a></li>
+                      </ul>
+
+                    </div><!-- Row Tabs Close -->
+
+                    <!-- Row Box -->
+                    <div class="tg-row-box">
+
+                      <!-- First Content -->
+                        <div class="row tg-row-content">
+                          <div class="row tg-row-picture col-xs-3 col-sm-3 col-md-3 text-center">
+                            <img id="tg-profile-picture" src="placeholders/avatar_10.png"><br> 
+                            <p id="tg-name" class="font-century-gothic"><b>Audrey Tan</b></p>
+                            <p id="tg-origin">From Singapore</p>
+                          </div>
+                          
+                          <div class="row tg-row-rating col-xs-9 col-sm-9 col-md-9">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <p id="tg-message">Aenean sed dapibus lacus.Aliquam orci urna, mattis varius leo non ,malesuada faucibus eros.Proin eget nulla nulla.Nuliam eu laculis erat.In euismod pulvinar odio</p>
+                            <p id="tg-dateTime">12/06/2016, 14:20</p>
+                          </div>
+                        </div>
+
+                          <!-- Second Content -->
+                         <div class="row tg-row-content">
+                          <div class="row tg-row-picture col-xs-3 col-sm-3 col-md-3 text-center">
+                            <img id="tg-profile-picture" src="placeholders/avatar_1.png"><br> 
+                            <p id="tg-name" class="font-century-gothic"><b>Valerie.Mel</b></p>
+                            <p id="tg-origin">From London</p>
+                          </div>
+                          
+                          <div class="row tg-row-rating col-xs-9 col-sm-9 col-md-9">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <p id="tg-message">Aenean sed dapibus lacus.Aliquam orci urna, mattis varius leo non ,malesuada faucibus eros.Proin eget nulla nulla.Nuliam eu laculis erat.In euismod pulvinar odio</p>
+                            <p id="tg-dateTime">12/06/2016, 14:20</p>
+                          </div>
+                        </div>
+
+                          <!-- Third Content -->
+                         <div class="row tg-row-content">
+                          <div class="row tg-row-picture col-xs-3 col-sm-3 col-md-3 text-center">
+                            <img id="tg-profile-picture" src="avatar_landing_36x36.png"><br> 
+                            <p id="tg-name" class="font-century-gothic"><b>Janet Travels</b></p>
+                            <p id="tg-origin">From Australia</p>
+                          </div>
+                          
+                          <div class="row tg-row-rating col-xs-9 col-sm-9 col-md-9">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <p id="tg-message">Aenean sed dapibus lacus.Aliquam orci urna, mattis varius leo non ,malesuada faucibus eros.Proin eget nulla nulla.Nuliam eu laculis erat.In euismod pulvinar odio</p>
+                            <p id="tg-dateTime">12/06/2016, 14:20</p>
+                          </div>
+                        </div>
+
+                        <!-- Fourth Content -->
+                        <div class="row tg-row-content">
+                          <div class="row tg-row-picture col-xs-3 col-sm-3 col-md-3 text-center">
+                            <img id="tg-profile-picture" src="placeholders/avatar_10.png"><br> 
+                            <p id="tg-name" class="font-century-gothic"><b>Audrey Tan</b></p>
+                            <p id="tg-origin">From Singapore</p>
+                          </div>
+                          
+                          <div class="row tg-row-rating col-xs-9 col-sm-9 col-md-9">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <p id="tg-message">Aenean sed dapibus lacus.Aliquam orci urna, mattis varius leo non ,malesuada faucibus eros.Proin eget nulla nulla.Nuliam eu laculis erat.In euismod pulvinar odio</p>
+                            <p id="tg-dateTime">12/06/2016, 14:20</p>
+                          </div>
+                        </div>
+                      
+                      <!-- Row Events Text -->
+                      <div class="tg-row-event-title">
+                        <b>Upcomming official events</b>
+                      </div><!-- Row Events Text Close -->
+
+                      <!-- Row Events Picture -->
+                      <div class="row tg-row-event-picture tgas-row-event-picture">
+
+                        <!-- First Content -->
+                        <div class="tg-event-picture-box col-xs-12 col-sm-4 col-md-4">
+
+                          <div class="row tgas-row">
+
+                            <img src="placeholders/music_by_the_bay.jpg"/>
+
+                            <div class="row tg-event-picture-description tgas-event-picture-description">
+                              <b class="font-century-gothic">MUSIC BY THE BAY 2016</b>
+                              <div class="row">
+                                <div class="col-xs-1 col-sm-1 col-md-1">
+                                  <i class="fa fa-map-marker"></i>
+                                </div>
+                                <div class="col-xs-11 col-sm-11 col-md-11">
+                                  Gardens by Bay,Singapore
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-xs-1 col-sm-1 col-md-1">
+                                  <i class="fa fa-clock-o"></i>
+                                </div>
+                                <div class="col-xs-11 col-sm-11 col-md-11">
+                                  Mon 26th Jun 2016 2pm to 4pm
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-xs-1 col-sm-1 col-md-1">
+                                  <i class="fa fa-users"></i>
+                                </div>
+                                <div class="col-xs-11 col-sm-11 col-md-11">
+                                  125 Participants
+                                </div>
+                              </div>
+
+                            </div>
+
+                            <div class="tg-picture-footer-btn tgas-picture-footer-btn">
+                              <p><b><i class="fa fa-circle-o"></i> Save Event</b></p>
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                        <!-- Second Content -->
+                        <div class="tg-event-picture-box col-xs-12 col-sm-4 col-md-4">
+
+                          <div class="row tgas-row">
+
+                            <img src="placeholders/placeholder_img_attractions_1.png"/>
+
+                            <div class="row tg-event-picture-description tgas-event-picture-description">
+                              <b class="font-century-gothic">SUMMER FESTIVAL 2016</b>
+                              <div class="row">
+                                <div class="col-xs-1 col-sm-1 col-md-1">
+                                  <i class="fa fa-map-marker"></i>
+                                </div>
+                                <div class="col-xs-11 col-sm-11 col-md-11">
+                                  Gardens by Bay,Singapore
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-xs-1 col-sm-1 col-md-1">
+                                  <i class="fa fa-clock-o"></i>
+                                </div>
+                                <div class="col-xs-11 col-sm-11 col-md-11">
+                                  Wed 9th Sep 2016 6pm to late
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-xs-1 col-sm-1 col-md-1">
+                                  <i class="fa fa-users"></i>
+                                </div>
+                                <div class="col-xs-11 col-sm-11 col-md-11">
+                                  211 Participants
+                                </div>
+                              </div>
+
+                            </div>
+
+                            <div class="tg-picture-footer-btn pink tg-checked-mark tgas-picture-footer-btn">
+                              <p><b><i class="fa fa-check-circle-o"></i> Going</b></p>
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                        <!-- Third Content -->
+                        <div class=" tg-event-picture-box col-xs-12 col-sm-4 col-md-4">
+
+                          <div class="row tgas-row">
+
+                            <img src="placeholders/Gardens-By-The-Bay-Singapore_10.jpg"/>
+
+                            <div class="row tg-event-picture-description tgas-event-picture-description">
+                              <b class="font-century-gothic">GARDEN CITY 2016</b>
+                              <div class="row">
+                                <div class="col-xs-1 col-sm-1 col-md-1">
+                                  <i class="fa fa-map-marker"></i>
+                                </div>
+                                <div class="col-xs-11 col-sm-11 col-md-11">
+                                  Gardens by Bay,Singapore
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-xs-1 col-sm-1 col-md-1">
+                                  <i class="fa fa-clock-o"></i>
+                                </div>
+                                <div class="col-xs-11 col-sm-11 col-md-11">
+                                  Wed 9th Sep 2016 6pm to late
+                                </div>
+                              </div>
+
+                              <div class="row">
+                                <div class="col-xs-1 col-sm-1 col-md-1">
+                                  <i class="fa fa-users"></i>
+                                </div>
+                                <div class="col-xs-11 col-sm-11 col-md-11">
+                                  215 Participants
+                                </div>
+                              </div>
+
+                            </div>
+
+                            <div class="tg-picture-footer-btn pink tg-checked-mark tgas-picture-footer-btn">
+                              <p><b><i class="fa fa-check-circle-o"></i> Going</b></p>
+                            </div>
+
+                          </div>
+
+                        </div>
+
+                      </div><!-- Row Events Picture Close -->
+
+                    </div><!-- Row Box Close -->
+                  </div><!-- Review Box Close -->
+
+
+                  <!-- Row Footer -->
+                  <div class="tgas-row-footer col-xs-12 col-sm-12 col-md-12 text-center">
+
+                    <div class="col-xs-12 col-sm-15 col-md-15">
+                        <div class="tgas-row-footer-picture">
+                          <img src="placeholders/placeholder_img_attractions_1.png"/>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-15 col-md-15">
+                        <div class="tgas-row-footer-picture">
+                            <img src="placeholders/placeholder_img_attractions_3.png"/>
+                            <div class="tgas-row-footer-picture-name">
+                                <p><b>Orchard ION</b></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-15 col-md-15">
+                        <div class="tgas-row-footer-picture">
+                            <img src="placeholders/placeholder_img_attractions_5.png"/>
+                            <div class="tgas-row-footer-picture-name">
+                                <p><b>Botanic Garden</b></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-15 col-md-15">
+                        <div class="tgas-row-footer-picture">
+                            <img src="placeholders/placeholder_img_attractions_6.png"/>
+                            <div class="tgas-row-footer-picture-name">
+                                <p><b>Merlion Park</b></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-15 col-md-15">
+                        <div class="tgas-row-footer-picture">
+                            <img src="placeholders/placeholder_img_attractions_4-296x178.png"/>
+                            <div class="tgas-row-footer-picture-name">
+                              <p><b>Universal Studio</b></p>
+                            </div> 
+                        </div>
+                    </div>
+
+                  </div><!-- Row Footer Close -->
+                </div><!-- Row Close -->
+               
+              </div><!-- Tab Attraction Content Close -->
+
+              <!-- Tab Events Content  -->
+              <div id="tg-event" class="tab-pane fade">
+
+                <!-- Row Open -->
+                <div class="row tg-row tge-row">
+                   
+                  <!-- Event Now Content  --> 
+                  <div class="row tge-event-now">
+
+                    <div class="tge-event-now-title">
+                      <p class="font-century-gothic"><b>Happening Now</b></p>
+                    </div>
+
+                    <div class="row tg-row-event-picture tge-row-event-picture font-open-sans">
+
+                      <!-- First Content -->
+                      <div class="col-xs-12 col-sm-4 col-md-4">
+
+                        <div class="tg-row-event-picture-detail tge-row-event-picture-detail">
+
+                          <img src="placeholders/music_by_the_bay.jpg"/>
+
+                          <div class="row tg-event-picture-description">
+                            <b class="font-century-gothic">MUSIC BY THE BAY 2016</b>
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-map-marker"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                Gardens by Bay,Singapore
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-clock-o"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                Mon 26th Jun 2016 2pm to 4pm
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-users"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                125 Participants
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="tg-picture-footer-btn tge-picture-footer-btn">
+                            <p><b><i class="fa fa-circle-o"></i> Save Event</b></p>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                      <!-- Second Content -->
+                      <div class="col-xs-12 col-sm-4 col-md-4">
+
+                        <div class="tg-row-event-picture-detail tge-row-event-picture-detail">
+
+                          <img src="placeholders/placeholder_img_attractions_1.png"/>
+
+                          <div class="row tg-event-picture-description">
+                            <b class="font-century-gothic">SUMMER FESTIVAL 2016</b>
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-map-marker"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                Gardens by Bay,Singapore
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-clock-o"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                Wed 9th Sep 2016 6pm to late
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-users"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                215 Participants
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="tg-picture-footer-btn tge-picture-footer-btn">
+                            <p><b><i class="fa fa-circle-o"></i> Save Event</b></p>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                      <!-- Third Content -->
+                      <div class="col-xs-12 col-sm-4 col-md-4">
+
+                        <div class="tg-row-event-picture-detail tge-row-event-picture-detail">
+
+                          <img src="placeholders/music_by_the_bay.jpg"/>
+
+                          <div class="row tg-event-picture-description">
+                            <b class="font-century-gothic">MUSIC BY THE BAY 2016</b>
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-map-marker"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                Garden by Bay,Singapore
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-clock-o"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                Mon 26th Jun 2010 2pm to 4pm
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-users"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                125 Participants
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="tg-picture-footer-btn tge-picture-footer-btn">
+                            <p><b><i class="fa fa-circle-o"></i> Save Event</b></p>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div><!-- Row Events Picture Close -->
+
+
+                  </div><!-- Event Now Content Close -->
+
+                  
+                  <!-- Upcoming Event Content  --> 
+                  <div class="row tge-upcoming-event">
+
+                    <div class="tge-upcoming-event-title">
+                      <p class="font-century-gothic"><b>Upcoming Events</b></p>
+                    </div>
+
+                    <div class="row tg-row-event-picture tge-row-event-picture font-open-sans">
+
+                      <!-- First Content -->
+                      <div class="col-xs-12 col-sm-4 col-md-4">
+
+                        <div class="tg-row-event-picture-detail tge-row-event-picture-detail">
+
+                          <img src="placeholders/music_by_the_bay.jpg"/>
+
+                          <div class="row tg-event-picture-description">
+                            <b class="font-century-gothic">MUSIC BY THE BAY 2016</b>
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-map-marker"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                Gardens by Bay,Singapore
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-clock-o"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                Mon 26th Jun 2016 2pm to 4pm
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-users"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                125 Participants
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="tg-picture-footer-btn tge-picture-footer-btn">
+                            <p><b><i class="fa fa-circle-o"></i> Save Event</b></p>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                      <!-- Second Content -->
+                      <div class="col-xs-12 col-sm-4 col-md-4">
+
+                        <div class="tg-row-event-picture-detail tge-row-event-picture-detail">
+
+                          <img src="placeholders/placeholder_img_attractions_1.png"/>
+
+                          <div class="row tg-event-picture-description">
+                            <b class="font-century-gothic">SUMMER FESTIVAL 2016</b>
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-map-marker"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                Gardens by Bay,Singapore
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-clock-o"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                Wed 9th Sep 2016 6pm to late
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-users"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                215 Participants
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="tg-picture-footer-btn tge-picture-footer-btn">
+                            <p><b><i class="fa fa-circle-o"></i> Save Event</b></p>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                      <!-- Third Content -->
+                      <div class="col-xs-12 col-sm-4 col-md-4">
+
+                        <div class="tg-row-event-picture-detail tge-row-event-picture-detail">
+
+                          <img src="placeholders/music_by_the_bay.jpg"/>
+
+                          <div class="row tg-event-picture-description">
+                            <b class="font-century-gothic">MUSIC BY THE BAY 2016</b>
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-map-marker"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                Gardens by Bay,Singapore
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-clock-o"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                Mon 26th Jun 2016 2pm to 4pm
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-users"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                125 Participants
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="tg-picture-footer-btn tge-picture-footer-btn">
+                            <p><b><i class="fa fa-circle-o"></i> Save Event</b></p>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                      <!-- Fourth Content -->
+                      <div class="col-xs-12 col-sm-4 col-md-4">
+
+                        <div class="tg-row-event-picture-detail tge-row-event-picture-detail">
+
+                          <img src="placeholders/music_by_the_bay.jpg"/>
+
+                          <div class="row tg-event-picture-description">
+                            <b class="font-century-gothic">MUSIC BY THE BAY 2016</b>
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-map-marker"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                Gardens by Bay,Singapore
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-clock-o"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                Mon 26th Jun 2016 2pm to 4pm
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-users"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                125 Participants
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="tg-picture-footer-btn tge-picture-footer-btn">
+                            <p><b><i class="fa fa-circle-o"></i> Save Event</b></p>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                      <!-- Fifth Content -->
+                      <div class="col-xs-12 col-sm-4 col-md-4">
+
+                        <div class="tg-row-event-picture-detail tge-row-event-picture-detail">
+
+                          <img src="placeholders/placeholder_img_attractions_1.png"/>
+
+                          <div class="row tg-event-picture-description">
+                            <b class="font-century-gothic">SUMMER FESTIVAL 2016</b>
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-map-marker"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                Gardens by Bay,Singapore
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-clock-o"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                Wed 9th Sep 2016 6pm to late
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-users"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                215 Participants
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="tg-picture-footer-btn tge-picture-footer-btn">
+                            <p><b><i class="fa fa-circle-o"></i> Save Event</b></p>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                      <!-- Sixth Content -->
+                      <div class="col-xs-12 col-sm-4 col-md-4">
+
+                        <div class="tg-row-event-picture-detail tge-row-event-picture-detail">
+
+                          <img src="placeholders/music_by_the_bay.jpg"/>
+
+                          <div class="row tg-event-picture-description">
+                            <b class="font-century-gothic">MUSIC BY THE BAY 2016</b>
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-map-marker"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                Gardens by Bay,Singapore
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-clock-o"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                Mon 26th Jun 2016 2pm to 4pm
+                              </div>
+                            </div>
+
+                            <div class="row">
+                              <div class="col-xs-1 col-sm-1 col-md-1">
+                                <i class="fa fa-users"></i>
+                              </div>
+                              <div class="col-xs-10 col-sm-10 col-md-10">
+                                125 Participants
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="tg-picture-footer-btn tge-picture-footer-btn">
+                            <p><b><i class="fa fa-circle-o"></i> Save Event</b></p>
+                          </div>
+
+                        </div>
+
+                      </div>
+
+                    </div><!-- Row Events Picture Close -->
+
+                  </div><!-- Upcomming Event Content Close -->
+
+                </div><!-- Row Close -->
+
+              </div><!-- Tab Events Content Close -->
+              
+            </div><!-- Tab Content Close -->
+
+          </div><!-- Modal Body Close -->
+
+          </div><!-- Modal Content Close -->
+        </div><!-- Modal Dialog Close -->
+      </div><!--Modal Fade Close  -->
+  </div><!-- Container Fluid Close -->
+</template>

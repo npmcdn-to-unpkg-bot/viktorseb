@@ -1,0 +1,45 @@
+.ctp-get-ticket-btn > .icon {
+ 	margin-left: -83px;
+}
+
+.ctp-remove-bookmark-btn > .icon {
+	margin-left: -58px;
+	color: #FF629F;
+}
+
+.ctp-row > img {
+	width: 100%;
+}
+.ctp-row {
+	padding:5px;
+}
+
+.second-plain-button.ctp-remove-bookmark-btn {
+	background: #FF629F;	
+}
+.ctp-event-picture-description {
+	padding: 5px 10px 0px;
+}
+.tg-picture-footer-btn.ctp-picture-footer-btn {
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+@media(max-width: 1000px) {
+	.ctp-get-ticket-btn > .icon {
+    	margin-left: -70px;
+	}
+	.ctp-remove-bookmark-btn > .icon {
+    	margin-left: -43px;
+	}
+	.tg-modal-header .ctp-mercury {
+		top: 65%;
+	}
+}
+
+@media(max-width: 360px) {
+	.ctp-row {
+		margin: 10px 0px;
+	}
+}
+

@@ -1,0 +1,38 @@
+.progreessbar-step-three{
+  height:570px;
+  width:600px;
+  margin-top: 40px;
+}
+.font-step-three{
+  font-weight:normal;
+  font-size:14px
+}
+.font-number-progressbar{
+  font-weight:600;
+  font-size:13px;
+  color:#D3DAE0;
+  margin-bottom:20px;
+}
+.font-zero{
+  padding-left:5px;
+}
+.font-ten{
+  padding-left:555px;
+}
+@media only screen and (max-width: 768px) {
+  .progreessbar-step-three{
+    width:110%;
+  }
+  input[type=range] {
+    width: 95%;
+    padding-right:1%;
+  }
+  .font-number-progressbar{
+    width: 100%;
+  }
+  .font-ten{
+    padding-left: 0px;
+    padding-right:5%; 
+    float:right;
+  }
+}

@@ -1,0 +1,42 @@
+#sub-main-header .plain-button{
+  width:124px;
+  height:36px;
+  float:right;
+  background-color:#FF629F;
+  color:white;
+  font-weight:bold;
+  font-size: 10px;
+}
+#sub-main-header .sub-left {
+   background-color: #21282C;
+   height: 63px;
+   padding-top: 13px;
+}
+#sub-main-header .sub-right {
+  background-color: #2C353A;
+  height: 63px;
+  padding-top:20px;
+}
+#sub-main-header input[type=text]{
+  background-color: #2C353A;
+  border: 0;
+  outline: none;
+  font-weight: normal;
+  color:#A2A2A2;
+  font-size:13px ;
+  width:200px;
+  margin-left:1%;
+}
+#sub-main-header .col-md-12{
+  background-color:#2C353A!important;
+  height: 63px;
+  padding-top: 20px;
+}
+@media screen and (max-width:991px) {
+  #sub-main-header .col-md-3.tg-header-button{
+    width:100%;
+  }
+}
+#sub-main-header img{
+  margin-left: 6%;
+}
