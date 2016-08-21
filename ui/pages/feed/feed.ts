@@ -1,5 +1,5 @@
 class PageFeed{
-    constructor($scope: any, $http: any){
+    constructor($scope: any, $http: any, $element: any){
         //var socketAttr = io.connect('http://localhost:8000/general');
         $scope.feed = [];
         /*var socketAttr = io.connect('http://localhost:8000/attractions');
@@ -21,8 +21,9 @@ class PageFeed{
                 $scope.$apply();
             }
         });*/
-        $http.get('https://apps.twinesocial.com/api/v1/content?campaign=SebastienSim').then(function(res: any){
+        $http.get('https://apps.twinesocial.com/api/v1/content?campaign=SebastienSim&limit=33').then(function(res: any){
           $scope.feed = res.data.rows;
+          //msnry.reloadItems();
         }, function(res: any){
           //Throw error?
         });

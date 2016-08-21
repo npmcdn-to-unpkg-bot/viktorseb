@@ -44,7 +44,7 @@ strong{font-weight: bold;}
 .numberslider .ns-container .ns-inner .upText{font-size: 22px;}
 .numberslider .ns-container .ns-inner .downText{letter-spacing: -0.4px;}
 .numberslider .ns-container .ns-inner #dragger{-webkit-tap-highlight-color: rgba(0,0,0,0);}
-.numberslider .ns-container .ns-inner svg{width: 100%; height: 100%; visibility: hidden;}
+.numberslider .ns-container .ns-inner svg{width: 100%; height: 700px; visibility: hidden;}
 .numberslider label, .numberslider div{font-weight: bold; font-size: 14px; color: #b2bbc7; display: block;}
 .numberslider .min, .numberslider .max{position: absolute; bottom: 5px;}
 .numberslider .min{left: 15px;}
@@ -238,7 +238,8 @@ header .user-nav ul li a img{width: 100%; height: 100%; border-radius: 100%; -mo
 .feed-box .body .author-block .text span{margin-right: 15px; font-size: 15px;}
 .feed-box .body .author-block .text span span{vertical-align: middle;}
 .feed-box .body .author-block .text .fa{color: #000; font-size: 18px; margin-right: 6px;}
-.feed-box .body p{font-size: 15px; line-height: 1.5em; color: #7b7b7b; padding-top: 20px;}
+.feed-box .body p{font-size: 15px; line-height: 1.5em; color: #7b7b7b; padding-top: 20px; max-height: 80px; overflow: hidden; transition: all 1s ease-in-out; -moz-transition: all 1s ease-in-out; -webkit-transition: all 1s ease-in-out;}
+.feed-box:hover .body p{max-height: 500px;}
 .feed-box .footer{padding: 15px 20px; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background: #f4f8fb;}
 .feed-box .footer > span{margin-right: 15px; font-size: 15px;}
 .feed-box .footer span .fa{font-size: 16px; margin-right: 5px;}
