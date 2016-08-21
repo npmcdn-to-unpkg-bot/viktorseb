@@ -2,7 +2,7 @@
     'use strict';
 
     angular.module('travifyapp', [
-        'ngRoute', 'oc.lazyLoad'
+        'ngRoute', 'oc.lazyLoad', 'angularMoment'
     ]).component('travify', {
         templateUrl: './ui/travify.html'
     }).config(function($routeProvider: any, $locationProvider: any){
@@ -27,7 +27,10 @@
                 template: '<page-newtrip2></page-newtrip2>',
                 resolve: {
                     loadComponent: ['$ocLazyLoad', function($ocLazyLoad: any) {
-                        return $ocLazyLoad.load('ui/pages/newtrip2/newtrip2.js');
+                        return $ocLazyLoad.load(['http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js',
+                                                  'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/utils/Draggable.min.js',
+                                                  'ui/pages/newtrip2/newtrip2.js',
+                                                  'ui/components/numberslider/numberslider.js']);
                     }]
                 }
             })

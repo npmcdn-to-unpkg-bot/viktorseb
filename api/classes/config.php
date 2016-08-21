@@ -4,7 +4,7 @@
         private $dbhost = 'localhost';
         private $dbname = 'travify';
         private $dbuser = 'root';
-        private $dbpass = 'root';
+        private $dbpass = '';
         //End of config
 
         public function getConnection(){
@@ -56,7 +56,7 @@
             }
             $this->directory = ($directory == '' ? DirFactory::getUpload() : $directory);
         }
-        
+
         public function requiredUpload($file){
             try{
                 return $this->upload($file);

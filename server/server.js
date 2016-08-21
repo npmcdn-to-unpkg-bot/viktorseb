@@ -1,9 +1,8 @@
 var http = require('http'), server = http.createServer(), srv = require('socket.io')(server).listen(8000), mysql = require('mysql'), db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'root',
-    database: 'travify',
-    socketPath: '/Applications/MAMP/tmp/mysql/mysql.sock'
+    password: '',
+    database: 'travify'
 }), http = require('https'), FacebookSocialApi = require('./modules/socialapi.js');
 var sv = {
     userCount: 0

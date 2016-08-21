@@ -14,9 +14,6 @@ var SocialApi = (function () {
     SocialApi.prototype.get = function () {
         return this._locationCache;
     };
-    SocialApi.prototype.doMoreStuff = function () {
-        console.log('zzzzz');
-    };
     return SocialApi;
 }());
 var FacebookSocialApi = (function (_super) {
@@ -52,7 +49,7 @@ var FacebookSocialApi = (function (_super) {
                         var cutmap = tmp.map(function (el) {
                             return {
                                 id: el.id,
-                                content: (el.name !== undefined ? el.name : 'Placeholder text just to show that content will be shown here. Placeholder text just to show that content will be shown here. Placeholder text just to show that content will be shown here. Placeholder text just to show that content will be shown here. Placeholder text just to show that content will be shown here. :)'),
+                                content: (el.name !== undefined ? el.name : 'Empty'),
                                 date: el.created_time,
                                 person: 'Audrey Tan',
                                 personImg: './static/upload/user.jpg',

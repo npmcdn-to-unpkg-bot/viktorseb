@@ -45,9 +45,9 @@
             <div class="slidemenu-main">
                 <div class="header">
                     <div class="header-bar day-selector">
-                        <span class="fa fa-chevron-left"></span>
-                        <span class="current">9 Jan, 2016</span>
-                        <span class="fa fa-chevron-right"></span>
+                        <span class="fa fa-chevron-left" ng-click="prevDay()"></span>
+                        <span class="current">{{date.start | amAdd : date.offset : 'days' | amUtc | amLocal | amDateFormat:'DD MMM YYYY'}}</span>
+                        <span class="fa fa-chevron-right" ng-click="nextDay()"></span>
                     </div>
                     <div class="header-subbar align-right show-estimated" ng-click="toggleEstimates($event);">Display estimated travel time <span class="fa fa-check"></span></div>
                 </div>

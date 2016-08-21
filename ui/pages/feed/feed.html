@@ -7,6 +7,40 @@
         <div class="feed">
             <div class="feed-box" ng-repeat="f in feed">
                 <div class="inner">
+                    <div class="header" style="background-image: url({{f.image_url}})"></div>
+                    <div class="body">
+                        <div class="author-block">
+                            <img class="author-pic" src="{{f.profile_url}}" alt=""/>
+                            <div class="text">
+                                <div class="author">{{f.from_user_name}}</div>
+                                <span>
+                                    <span class="fa fa-map-marker"></span>
+                                    <span>{{f.place}}</span>
+                                </span>
+                                <span>
+                                    <span class="fa fa-clock-o"></span>
+                                    <span>{{f.created_at}}</span>
+                                </span>
+                            </div>
+                        </div>
+                        <p>{{f.description}}</p>
+                    </div>
+                    <div class="footer">
+                        <span><span class="fa fa-heart-o"></span><span>{{f.votes}}</span></span>
+                        <span><span class="fa fa-comment-o"></span><span>{{f.comments}}</span></span>
+                        <span class="right"><span class="fa fa-circle-o"></span><span>Save Location</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <section id="page-feed" class="page-content">
+    <div class="wrap">
+        <img class="headerimg" src="./static/img/tmp-header.jpg" alt=""/>
+        <div class="feed">
+            <div class="feed-box" ng-repeat="f in feed">
+                <div class="inner">
                     <div class="header" style="background-image: url({{f.placeImg}})"></div>
                     <div class="body">
                         <div class="author-block">
@@ -34,4 +68,4 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->

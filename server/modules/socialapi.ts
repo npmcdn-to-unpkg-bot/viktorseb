@@ -10,9 +10,6 @@ class SocialApi{
     get(){
         return this._locationCache;
     }
-    doMoreStuff(){
-        console.log('zzzzz');
-    }
 }
 class FacebookSocialApi extends SocialApi{
     _batch: any[] = [];

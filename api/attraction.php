@@ -1,5 +1,5 @@
 <?php
-    require_once('./classes/API.php');
+    require_once('/classes/API.php');
 
     class AtrractionAPI extends API{
         protected function doGet(){
@@ -11,7 +11,7 @@
                 $stmt->execute();
             }
             $res = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            
+
             if (!empty($res)){
                 $this->sendResponse(200, $res);
             } else {
@@ -23,7 +23,24 @@
             //$uploader = new Uploader('image', DirFactory::getAttraction());
             //$img = $uploader->requiredUpload($_FILES['img']);
             $img ='';
-            
+
+            if (strpos($_POST['facebook'], 'facebook.com') !== false){
+              $fdata = fopen('https://graph.facebook.com/v2.7/?id='.$_POST['facebook'].'&access_token=1243426629009918|a7ab781bb2a56006f21c0830bfe77aec', 'r');
+              if (!$fdata){
+                $this->sendResponse(202, 'There was an error decoding the url, please check if its correct.');
+              }
+              $data = '';
+              while (!feof($fdata)){
+                $data .= fgets($fdata, 1000);
+              }
+              fclose($fdata);
+              $data = json_decode($data);
+              if (!isset($data->id)){
+                $this->sendResponse(202, 'There was an error decoding the url, please check if its correct.');
+              }
+              $_POST['facebook'] = $data->id;
+            }
+
             $stmt = $this->db->prepare("INSERT INTO `attractions`(`name`, `openTime`, `closeTime`, `description`, `price`, `img`, `location`, `facebook`, `instagram`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
             $stmt->execute(array($_POST['name'], $_POST['openTime'], $_POST['closeTime'], $_POST['description'], floatval($_POST['price']), $img, $_POST['location'], $_POST['facebook'], $_POST['instagram']));
             if ($stmt->rowCount() == 1){
@@ -57,7 +74,7 @@
         protected function validateData($extended = false){
             $errors = array();
             $_POST = json_decode(file_get_contents('php://input'), true);
-            if (empty($_POST['name']) || empty($_POST['description']) || empty($_POST['location']) || empty($_POST['openTime']) || empty($_POST['closeTime']) 
+            if (empty($_POST['name']) || empty($_POST['description']) || empty($_POST['location']) || empty($_POST['openTime']) || empty($_POST['closeTime'])
                 || !isset($_POST['price']) || empty($_POST['facebook']) || empty($_POST['instagram'])){
                 $errors[] = "Please fill all the fields";
             } else if (strlen($_POST['openTime']) != 8 || strlen($_POST['closeTime']) != 8){
@@ -68,7 +85,6 @@
             if ($extended){
                 if (empty($_FILES['img']['name'])) $errors[] = "Please set the miniature image";
             }
-
             if (!empty($errors)){
                 $this->sendResponse(202, $errors);
             }
@@ -77,15 +93,3 @@
 
     (new AtrractionAPI())->run();
 ?>
-
-<form method="POST" enctype="multipart/form-data">
-    <input type="text" name="name">
-    <input type="text" name="description">
-    <input type="text" name="location">
-    <input type="text" name="openTime">
-    <input type="text" name="closeTime">
-    <input type="number" name="price" value="0.00" step="0.01" min="0.00">
-    <input type="file" name="img">
-    <input type="text" name="fbPage">
-    <input type="submit" value="ee">
-</form>

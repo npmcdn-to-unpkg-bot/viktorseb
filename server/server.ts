@@ -9,13 +9,13 @@ var http = require('http'),
         database: 'travify'
     }),
 	http = require('https'),
-    FacebookSocialApi = require('./modules/socialapi.js');
+  FacebookSocialApi = require('./modules/socialapi.js');
 
 var sv = {
     userCount: 0
 }
 
-srv.of('/general').on('connection', function(socket){
+srv.of('/general').on('connection', function(socket: any){
     sv.userCount++;
     console.log('User joined. Current users: ' + sv.userCount);
     socket.on('disconnect', function(){
@@ -24,13 +24,13 @@ srv.of('/general').on('connection', function(socket){
     })
 })
 
-srv.of('/admin').on('connection', function(socket){
-    socket.on('user count', function(fn){
+srv.of('/admin').on('connection', function(socket: any){
+    socket.on('user count', function(fn: any){
         fn(sv.userCount);
     })
 })
 
-srv.of('/attractions').on('connection', function(socket){
+srv.of('/attractions').on('connection', function(socket: any){
     socket.join('Singapore');
     processApi();
    /* if (locationCache['Singapore'].length){
@@ -43,10 +43,10 @@ function processApi(){
     //srv.of('/attractions').to('Singapore').emit('rcv feed', 'processingApi');
     //http.req
     //getFacebook();
-    db.query("SELECT `facebook` FROM `attractions` WHERE `location` = 'Singapore'", function(err, rows, fields){
+    db.query("SELECT `facebook` FROM `attractions` WHERE `location` = 'Singapore'", function(err: any, rows: any, fields: any){
         if (err) console.log('error retrieving from database');
         var fb = new FacebookSocialApi();
-        rows.forEach(element => {
+        rows.forEach((element: any) => {
             fb.addPage(element.facebook);
         });
         //return;
