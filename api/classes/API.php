@@ -18,7 +18,7 @@
                 case 'DELETE': $this->doDelete(); break;
             };
         }
-        
+
         protected function doGet(){
             $this->sendResponse(405);
         }
@@ -38,8 +38,8 @@
         protected function sendResponse($code, $body = ''){
             http_response_code($code);
             if ($body != ''){
-                if (is_string($body)) $body = array($body);
-                print(json_encode($body));
+                if (is_array($body)) $body = json_encode($body);
+                echo $body;
             }
             exit;
         }

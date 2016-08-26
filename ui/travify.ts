@@ -67,5 +67,12 @@
                 }
             })
             .otherwise('/');
-    });
+    }).service('Session', function ($http: any) {
+      var startDate: any, endDate: any, market: any;
+
+      this.getFlights = function(){
+        console.log("start: " + startDate);
+        console.log("end: " + endDate);
+      }
+  });
 })();

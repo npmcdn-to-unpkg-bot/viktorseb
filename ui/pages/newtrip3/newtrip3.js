@@ -1,12 +1,12 @@
 var PageNewTrip3 = (function () {
-    function PageNewTrip3($scope) {
+    function PageNewTrip3($scope, $http) {
         'ngInject';
         var self = this;
         $scope.date = {
             start: new Date(),
             offset: 0
         };
-        var resultsList = self.callWebApi();
+        var resultsList = self.callWebApi($http);
         var map = self.generateMap(resultsList[$scope.date.offset][0].lat, resultsList[$scope.date.offset][0].lng);
         var activeControl = self.generateControls(resultsList[$scope.date.offset]);
         map.addControl(activeControl);
@@ -35,7 +35,26 @@ var PageNewTrip3 = (function () {
         $scope.openOverlay = false;
     }
     ;
-    PageNewTrip3.prototype.callWebApi = function () {
+    PageNewTrip3.prototype.callWebApi = function ($http) {
+        $http({
+            method: 'POST',
+            url: "http://188.166.230.3:8080/TripEngine/TripEngine",
+            data: {
+                "cashFlow": 500,
+                "travelDays": 3,
+                "startTime": 800,
+                "endTime": 2230,
+                "startAddress": 45,
+                "endAddress": 45,
+                "mustGo": [],
+                "preferences": []
+            }
+        }).then(function (res) {
+            console.log(res);
+            return res;
+        }, function () {
+            console.log("Error connecting to webApi");
+        });
         var resultsList = [[{ "id": 21, "lat": 1.302503, "lng": 103.857983 }, { "id": 16, "lat": 1.307792, "lng": 103.852583 }, { "id": 3, "lat": 1.339988, "lng": 103.833401 }, { "id": 1, "lat": 1.361516, "lng": 103.835812 }, { "id": 39, "lat": 1.311125, "lng": 103.814733 }, { "id": 34, "lat": 1.30351, "lng": 103.833056 }, { "id": 17, "lat": 1.313351, "lng": 103.855794 }, { "id": 35, "lat": 1.307745, "lng": 103.851086 }], [{ "id": 33, "lat": 1.28633, "lng": 103.852932 }, { "id": 31, "lat": 1.279464, "lng": 103.849946 }, { "id": 5, "lat": 1.2816209, "lng": 103.844377 }, { "id": 41, "lat": 1.277307, "lng": 103.837311 }, { "id": 15, "lat": 1.271026, "lng": 103.819773 }, { "id": 8, "lat": 1.304586, "lng": 103.839427 }, { "id": 22, "lat": 1.292935, "lng": 103.849662 }, { "id": 12, "lat": 1.290154, "lng": 103.844846 }, { "id": 26, "lat": 1.301016, "lng": 103.845411 }], [{ "id": 10, "lat": 1.289857, "lng": 103.8552799 }, { "id": 24, "lat": 1.280635, "lng": 103.87159 }, { "id": 2, "lat": 1.281744, "lng": 103.867383 }, { "id": 30, "lat": 1.303091, "lng": 103.859858 }, { "id": 23, "lat": 1.303746, "lng": 103.901182 }, { "id": 38, "lat": 1.31451, "lng": 103.901022 }, { "id": 14, "lat": 1.300191, "lng": 103.857614 }]];
         return resultsList;
     };

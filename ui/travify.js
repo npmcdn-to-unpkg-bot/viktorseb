@@ -66,5 +66,11 @@
             }
         })
             .otherwise('/');
+    }).service('Session', function ($http) {
+        var startDate, endDate, market;
+        this.getFlights = function () {
+            console.log("start: " + startDate);
+            console.log("end: " + endDate);
+        };
     });
 })();
