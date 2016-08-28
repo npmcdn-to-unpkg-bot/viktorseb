@@ -66,11 +66,13 @@
             }
         })
             .otherwise('/');
-    }).service('Session', function ($http) {
-        var startDate, endDate, market;
-        this.getFlights = function () {
-            console.log("start: " + startDate);
-            console.log("end: " + endDate);
+    }).factory('Session', function ($http) {
+        var data = {
+            hotels: [],
+            startDate: moment(new Date('2016-10-10')),
+            endDate: moment(new Date('2016-10-12')),
+            market: "SG"
         };
+        return data;
     });
 })();

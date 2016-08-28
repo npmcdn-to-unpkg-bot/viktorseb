@@ -32,20 +32,20 @@
         <h2 class="main-heading bot-border">Where are you going?</h2>
         <div class="input-group">
             <label>Country/state</label>
-            <input type="text" placeholder="Type in a location" />
+            <input type="text" placeholder="Type in a location" ng-model="location" ng-change="suggestHotels()"/>
         </div>
         <h2 class="main-heading bot-border">Duration of your trip</h2>
         <div class="input-group">
             <label>Start date of trip</label>
             <div class="input">
-                <input type="date" placeholder="Tuesday, 9 January 2016, 2PM" ng-model="session.startDate" />
+                <input type="date" placeholder="Tuesday, 9 January 2016, 2PM" ng-model="startDate" ng-change="setStartDate()" />
                 <span class="fa fa-calendar"></span>
             </div>
         </div>
         <div class="input-group">
             <label>End date of trip</label>
             <div class="input">
-                <input type="date" placeholder="Tuesday, 9 January 2016, 2PM" ng-model="session.endDate" />
+                <input type="date" placeholder="Tuesday, 9 January 2016, 2PM" ng-model="endDate" ng-change="setEndDate()" />
                 <span class="fa fa-calendar"></span>
             </div>
         </div>
@@ -56,12 +56,13 @@
         </div>
         <ul class="cols-2">
           <li ng-repeat="hotel in hotels">
-              <div class="inner card card-booknow">
-                  <div class="min"><img src="./static/upload/attraction.jpg" alt="" /></div>
+              <div class="inner card card-booknow selectable" ng-class="{'selected': checkHotel(hotel)}" ng-click="selectHotel(hotel)">
+                  <div class="min"><img ng-src="{{hotel.img}}" alt="{{hotel.name}}" /></div>
                   <div class="content">
-                      <h3 class="heading">{{hotel.display_name}}</h3>
-                      <div class="details"><a href="#">See details</a></div>
-                      <button class="btn btn-pink">Select</button>
+                      <h3 class="heading">{{hotel.name}}</h3>
+                      <p>Stars: {{hotel.stars}}</p>
+                      <p>Ratings: {{hotel.score}}</p>
+                      <div class="details"><a href="javascript:void(0)">See details</a></div>
                   </div>
               </div>
           </li>

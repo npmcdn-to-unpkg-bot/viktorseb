@@ -1,7 +1,18 @@
 var NewTrip4 = (function () {
-    function NewTrip4($scope, Session) {
+    function NewTrip4($scope, Session, $http) {
         'ngInject';
-        Session.getFlights();
+        $scope.hotels = Session.hotels;
+        $scope.flights = [];
+        $http({
+            method: 'GET',
+            url: 'api/flight.php',
+            params: { startDate: moment(Session.startDate).format('Y-MM-DD'), endDate: moment(Session.endDate).format('Y-MM-DD'), market: "SG" }
+        }).then(function (res) {
+            console.log(res);
+            $scope.flights = res.data;
+        }, function () {
+            console.log("Error with flights retrieving");
+        });
     }
     return NewTrip4;
 }());

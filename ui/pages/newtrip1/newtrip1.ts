@@ -1,28 +1,56 @@
 class PageNewTrip1{
     constructor($scope: any, Session: any, $http: any){
-      $scope.session = Session;
-      $scope.hotel = [];
-      $scope.suggestHotels = function(){
-        //Session.getAutoSuggest($scope.hotelName);
-        if ($scope.hotelName.length >= 2)
-        $http({
-          method: 'GET',
-          url: 'api/hotel.php',
-          params: {hotelName: $scope.hotelName,
-                  market: 'SG',
-                  startDate: '2016-12-10',
-                  endDate: '2016-12-12',
-                  rooms: 1,
-                  guests: 2}
-        }).then(function(res: any){
-          //$scope.hotels = res.data.results;
-          $scope.hotels = res.data.results.filter((elem) => {
-            return elem.geo_type == "Hotel";
-          })
-          console.log($scope.hotels);
-        }, function(){
-          console.log("Error connecting to api");
-        });
+      var suggestRunning = false;
+      $scope.startDate = new Date();
+      $scope.endDate = new Date();
+      $scope.hotels = [];
+
+      $scope.$watch('startDate', function(val){
+        Session.startDate = moment(val);
+      });
+      $scope.$watch('endDate', function(val){
+        Session.endDate = moment(val);
+      });
+      $scope.selectHotel = function(hotel: any){
+        Session.hotels = Array(hotel);
+        if ($scope.hotels.length > 1){
+          var random: any;
+          do{
+            random = $scope.hotels[Math.floor(Math.random()*$scope.hotels.length)];
+          } while(random == hotel);
+          Session.hotels.push(random);
+        }
+        console.log(Session.hotels);
+      }
+      $scope.checkHotel = function(hotel: any){
+        if (Session.hotels === undefined) return false;
+        return Session.hotels[0] == hotel;
+      }
+      $scope.suggestHotels = function (){
+        console.log(suggestRunning);
+        if (suggestRunning) return;
+        suggestRunning = true;
+        var search = '';
+        if($scope.hotelName !== undefined  && $scope.hotelName.length > 2){
+          search = $scope.hotelName;
+        } else if ($scope.location !== undefined && $scope.location.length > 2){
+          search = $scope.location;
+        }
+        if (search != ''){
+          $http({
+            method: 'GET',
+            url: 'api/hotel.php',
+            params: {search: search}
+          }).then(function(res:any){
+            $scope.hotels = res.data;
+            suggestRunning = false;
+          }, function(){
+            console.log("Error with hotel retrieving");
+            suggestRunning = false;
+          });
+        } else {
+          suggestRunning = false;
+        }
       }
     }
 }

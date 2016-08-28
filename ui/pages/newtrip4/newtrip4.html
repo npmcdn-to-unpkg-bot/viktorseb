@@ -39,20 +39,11 @@
                         <div class="date">14 Jan 2016 - 22 Jan 2016</div>
                         <div class="flights">
                             <strong><span class="fa fa-plane"></span> Book your flight now with:</strong>
-                            <div class="row">
-                                <a href="#"><img src="./static/upload/flight.png" alt="" /></a>
-                            </div>
-                            <div class="row">
-                                <a href="#"><img src="./static/upload/flight.png" alt="" /></a>
-                            </div>
-                            <div class="row">
-                                <a href="#"><img src="./static/upload/flight.png" alt="" /></a>
-                            </div>
-                            <div class="row">
-                                <a href="#"><img src="./static/upload/flight.png" alt="" /></a>
-                            </div>
-                            <div class="row">
-                                <a href="#"><img src="./static/upload/flight.png" alt="" /></a>
+                            <div class="row" ng-repeat="flight in flights">
+                              <a href="javascript:void(0)">
+                                <span class="flightmin"><img ng-src="./static/upload/flights/{{flight.carrier}}.png" alt="{{flight.carrierName}}" /></span>
+                                <span>${{flight.price}}</span>
+                              </a>
                             </div>
                         </div>
                     </div>
@@ -61,28 +52,18 @@
         </ul>
         <h2 class="main-heading bot-border">Place of Accomodation</h2>
         <ul class="cols-2">
-            <li>
-                <div class="inner card card-booknow selected">
-                    <div class="min"><img src="./static/upload/attraction.jpg" alt="" /></div>
-                    <div class="content">
-                        <h3 class="heading">Botanic Gardens</h3>
-                        <div class="date">14 Jan 2016 - 22 Jan 2016</div>
-                        <div class="details"><a href="#">See details</a></div>
-                        <button class="btn btn-pink">Book now</button>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="inner card card-booknow selected">
-                    <div class="min"><img src="./static/upload/attraction.jpg" alt="" /></div>
-                    <div class="content">
-                        <h3 class="heading">Botanic Gardens</h3>
-                        <div class="date">14 Jan 2016 - 22 Jan 2016</div>
-                        <div class="details"><a href="#">See details</a></div>
-                        <button class="btn btn-pink">Book now</button>
-                    </div>
-                </div>
-            </li>
+          <li ng-repeat="hotel in hotels">
+              <div class="inner card card-booknow" ng-click="selectHotel(hotel)">
+                  <div class="min"><img src="{{hotel.img}}" alt="{{hotel.name}}" /></div>
+                  <div class="content">
+                      <h3 class="heading">{{hotel.name}}</h3>
+                      <p>Stars: {{hotel.stars}}</p>
+                      <p>Stars: {{hotel.score}}</p>
+                      <!--<div class="details"><a href="#">See details</a></div>-->
+                      <a href="{{hotel.url}}" class="btn btn-pink">Book now</a>
+                  </div>
+              </div>
+          </li>
         </ul>
         <h2 class="main-heading bot-border">Attractions</h2>
         <ul class="cols-2">

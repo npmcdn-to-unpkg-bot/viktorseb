@@ -87,9 +87,10 @@ strong{font-weight: bold;}
 .cols-2 .card .min{width: 150px; height: 150px;}
 .cols-2 .card .content{height: 150px; margin-left: -155px; padding: 20px 20px 20px 175px;}
 
-.card.card-info.selectable:after{content:"\f00c"; font-family:'FontAwesome'; display: inline-block; position: absolute; bottom: 10px; right: 10px; padding: 5px; opacity: 0; background: #b1b1b1; color: #fff; border-radius: 100%; -moz-border-radius: 100%; -webkit-border-radius: 100%; transition: all 0.5s; -moz-transition: all 0.5s; -webkit-transition: all 0.5s;}
-.card.card-info.selectable:hover:after{opacity: 1;}
-.card.card-info.selectable.selected:after{background: #ff629f; opacity: 1;}
+.card.selectable:after{content:"\f00c"; font-family:'FontAwesome'; display: inline-block; position: absolute; bottom: 10px; right: 10px; padding: 5px; opacity: 0; background: #b1b1b1; color: #fff; border-radius: 100%; -moz-border-radius: 100%; -webkit-border-radius: 100%; transition: all 0.5s; -moz-transition: all 0.5s; -webkit-transition: all 0.5s;}
+.card.selectable:hover:after{opacity: 1;}
+.card.selectable.selected:after{background: #ff629f; opacity: 1;}
+
 .card.card-info .content div{margin: 3px 0;}
 .card.card-info .content .type{margin-top: 8px; color: #b2bbc7;}
 .card.card-info .content .tags{font-size: 13px;}
@@ -114,7 +115,7 @@ strong{font-weight: bold;}
 
 .card.card-booknow .date{font-size: 14px; font-weight: bold; text-transform: uppercase; color: #3a454b; margin: 6px 0;}
 .card.card-booknow .details a{text-decoration: underline;}
-.card.card-booknow .btn{font-size: 15px; padding: 8px 16px; margin-top: 10px;}
+.card.card-booknow .btn{font-size: 15px; padding: 8px 16px; margin-top: 10px; line-height: 22px;}
 
 .card.card-target .min{width: 250px; height: 170px;}
 .card.card-target .content{height: 170px; margin-left: -255px; padding: 30px 30px 30px 285px;}
@@ -123,9 +124,10 @@ strong{font-weight: bold;}
 .card.card-target .content .flights{position: relative; font-size: 0; padding-left: 300px;}
 .card.card-target .content .flights strong{font-size: 16px; display: block; padding: 0 5px 10px 5px;}
 .card.card-target .content .flights strong .fa{font-size: 22px; vertical-align: middle;}
-.card.card-target .content .flights .row{width: 20%; display: inline-block; vertical-align: middle; font-size: 16px; padding: 0 5px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
+.card.card-target .content .flights .row{width: 20%; display: inline-block; vertical-align: middle; text-align: center; font-size: 16px; padding: 0 5px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
 .card.card-target .content .flights .row:nth-of-type(5n){margin-right: 0;}
 .card.card-target .content .flights .row img{width: 100%;}
+.card.card-target .content .flights .row .flightmin{height: 24px; display: block;}
 
 /* HEADER */
 header{padding: 10px 0;}

@@ -67,12 +67,13 @@
                 }
             })
             .otherwise('/');
-    }).service('Session', function ($http: any) {
-      var startDate: any, endDate: any, market: any;
-
-      this.getFlights = function(){
-        console.log("start: " + startDate);
-        console.log("end: " + endDate);
-      }
+    }).factory('Session', function ($http: any) {
+      var data = {
+        hotels: [],
+        startDate: moment(new Date('2016-10-10')),
+        endDate: moment(new Date('2016-10-12')),
+        market: "SG"
+      };
+      return data;
   });
 })();
