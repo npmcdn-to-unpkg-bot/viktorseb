@@ -41,7 +41,7 @@
                             <strong><span class="fa fa-plane"></span> Book your flight now with:</strong>
                             <div class="row" ng-repeat="flight in flights">
                               <a href="javascript:void(0)">
-                                <span class="flightmin"><img ng-src="./static/upload/flights/{{flight.carrier}}.png" alt="{{flight.carrierName}}" /></span>
+                                <span class="flightmin"><img ng-src="./static/upload/flights/{{flight.carrier}}.png" alt="{{flight.carrierName}}" onerror="this.onerror=null;this.src='./static/upload/flights/default.png';" /></span>
                                 <span>${{flight.price}}</span>
                               </a>
                             </div>
