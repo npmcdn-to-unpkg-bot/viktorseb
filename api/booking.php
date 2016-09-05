@@ -1,5 +1,5 @@
 <?php
-    require_once('/classes/API.php');
+    require_once('classes/API.php');
 
     class BookingAPI extends API{
         protected function doGet(){
