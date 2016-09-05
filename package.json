@@ -1,0 +1,20 @@
+{
+  "name": "travify",
+  "description": " ",
+  "repository": " ",
+  "license": "UNLICENSED",
+  "version": "0.0.1",
+  "author": "Nikola Radovanovic",
+  "contributors": [
+    "Nikola Radovanovic <nikola.r@toptal.com>"
+  ],
+  "dependencies": {
+    "browser-sync": "^2.14.3",
+    "gulp": "~3.9.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-connect": "^2.0.6",
+    "gulp-connect-php": "0.0.8",
+    "gulp-sass": "^2.1.1",
+    "gulp-watch": "^4.3.5"
+  }
+}
