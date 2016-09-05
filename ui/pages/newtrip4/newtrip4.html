@@ -28,29 +28,40 @@
     </div>
 </section>
 <section id="page-summary" class="page-content">
-    <div class="wrap">
-        <h2 class="main-heading bot-border">Your Trip</h2>
-        <ul class="cols-1">
-            <li>
-                <div class="inner card card-target selected">
-                    <div class="min"><img src="./static/upload/attraction.jpg" alt="" /></div>
-                    <div class="content">
-                        <h3 class="heading">Singapore</h3>
-                        <div class="date">14 Jan 2016 - 22 Jan 2016</div>
-                        <div class="flights">
-                            <strong><span class="fa fa-plane"></span> Book your flight now with:</strong>
-                            <div class="row" ng-repeat="flight in flights">
-                              <a href="javascript:void(0)">
-                                <span class="flightmin"><img ng-src="./static/upload/flights/{{flight.carrier}}.png" alt="{{flight.carrierName}}" onerror="this.onerror=null;this.src='./static/upload/flights/default.png';" /></span>
-                                <span>${{flight.price}}</span>
-                              </a>
-                            </div>
+    <div id="summary">
+        <div class="wrap">
+            <ul class="cols-1">
+                <li>
+                    <div class="inner card card-target selected">
+                        <div class="min"><img src="./static/upload/attraction.jpg" alt="" /></div>
+                        <div class="content">
+                            <div class="supheading">SINGAPORE</div>
+                            <h3 class="heading">Singapore</h3>
+                            <div class="supheading"><i class="fa fa-user"></i> PEOPLE</div>
+                            <h3 class="heading">3 Adults | 2 Children | 0 Infants</h3>
+                            <div class="supheading"><i class="fa fa-calendar"></i> DEPARATURE DATE</div>
+                            <h3 class="heading">{{startDate}}</h3>
+                            <div class="supheading"><i class="fa fa-calendar"></i> RETURN DATE</div>
+                            <h3 class="heading">{{endDate}}</h3>
                         </div>
                     </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrap">
+        <h2 class="main-heading bot-border">Your Flight</h2>
+        <ul class="cols-1">
+            <li>
+                <div class="inner card card-target selected" ng-repeat="flight in flights">
+
+                    <span class="flightmin"><img ng-src="./static/upload/flights/{{flight.carrier}}.png" alt="{{flight.carrierName}}" onerror="this.onerror=null;this.src='./static/upload/flights/default.png';" /></span>
+                    <i class="fa fa-plane"></i>
+                    <span>${{flight.price}}</span>
                 </div>
             </li>
         </ul>
-        <h2 class="main-heading bot-border">Place of Accomodation</h2>
+        <h2 class="main-heading bot-border">Your Hotel</h2>
         <ul class="cols-2">
           <li ng-repeat="hotel in hotels">
               <div class="inner card card-booknow" ng-click="selectHotel(hotel)">
@@ -65,7 +76,7 @@
               </div>
           </li>
         </ul>
-        <h2 class="main-heading bot-border">Attractions</h2>
+        <h2 class="main-heading bot-border">Your attractions</h2>
         <ul class="cols-2">
             <li>
                 <div class="inner card card-booknow selected">
@@ -74,7 +85,7 @@
                         <h3 class="heading">Botanic Gardens</h3>
                         <div class="date">14 Jan 2016 - 22 Jan 2016</div>
                         <div class="details"><a href="#">See details</a></div>
-                        <button class="btn btn-pink">Book now</button>
+                        <button class="btn btn-transparent">Book now</button>
                     </div>
                 </div>
             </li>
@@ -85,7 +96,7 @@
                         <h3 class="heading">Botanic Gardens</h3>
                         <div class="date">14 Jan 2016 - 22 Jan 2016</div>
                         <div class="details"><a href="#">See details</a></div>
-                        <button class="btn btn-pink">Book now</button>
+                        <button class="btn btn-transparent">Book now</button>
                     </div>
                 </div>
             </li>

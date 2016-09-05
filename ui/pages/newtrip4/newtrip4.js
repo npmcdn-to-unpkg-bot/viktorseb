@@ -2,6 +2,8 @@ var NewTrip4 = (function () {
     function NewTrip4($scope, Session, $http) {
         'ngInject';
         $scope.hotels = Session.hotels;
+        $scope.startDate = moment(Session.startDate).format('DD.MM.Y');
+        $scope.endDate = moment(Session.endDate).format('DD.MM.Y');
         $scope.flights = [];
         $http({
             method: 'GET',
