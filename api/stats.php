@@ -1,5 +1,5 @@
 <?php
-    require_once('classes/API.php');
+    require_once(__DIR__ . '/classes/API.php');
 
     class StatsAPI extends API{
         protected function doGet(){
