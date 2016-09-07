@@ -1,7 +1,7 @@
 (function () {
     'use strict';
     angular.module('travifyapp', [
-        'ngRoute', 'oc.lazyLoad', 'angularMoment'
+        'ngRoute', 'oc.lazyLoad', 'angularMoment', 'datePicker'
     ]).component('travify', {
         templateUrl: './ui/travify.html'
     }).config(function ($routeProvider, $locationProvider) {

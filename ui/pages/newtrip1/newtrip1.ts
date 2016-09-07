@@ -1,15 +1,16 @@
 class PageNewTrip1{
     constructor($scope: any, Session: any, $http: any){
-      var suggestRunning = false;
-      $scope.startDate = new Date();
-      $scope.endDate = new Date();
+      $scope.suggestRunning = false;
+      $scope.startDate = moment();
+      $scope.endDate = moment();
+      $scope.today = moment();
       $scope.hotels = [];
 
       $scope.$watch('startDate', function(val){
-        Session.startDate = moment(val);
+        Session.startDate = val;
       });
       $scope.$watch('endDate', function(val){
-        Session.endDate = moment(val);
+        Session.endDate = val;
       });
       $scope.selectHotel = function(hotel: any){
         Session.hotels = Array(hotel);
@@ -27,9 +28,8 @@ class PageNewTrip1{
         return Session.hotels[0] == hotel;
       }
       $scope.suggestHotels = function (){
-        console.log(suggestRunning);
-        if (suggestRunning) return;
-        suggestRunning = true;
+        if ($scope.suggestRunning) return;
+        $scope.suggestRunning = true;
         var search = '';
         if($scope.hotelName !== undefined  && $scope.hotelName.length > 2){
           search = $scope.hotelName;
@@ -43,13 +43,13 @@ class PageNewTrip1{
             params: {search: search}
           }).then(function(res:any){
             $scope.hotels = res.data;
-            suggestRunning = false;
+            $scope.suggestRunning = false;
           }, function(){
             console.log("Error with hotel retrieving");
-            suggestRunning = false;
+            $scope.suggestRunning = false;
           });
         } else {
-          suggestRunning = false;
+          $scope.suggestRunning = false;
         }
       }
     }

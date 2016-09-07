@@ -1,14 +1,15 @@
 var PageNewTrip1 = (function () {
     function PageNewTrip1($scope, Session, $http) {
-        var suggestRunning = false;
-        $scope.startDate = new Date();
-        $scope.endDate = new Date();
+        $scope.suggestRunning = false;
+        $scope.startDate = moment();
+        $scope.endDate = moment();
+        $scope.today = moment();
         $scope.hotels = [];
         $scope.$watch('startDate', function (val) {
-            Session.startDate = moment(val);
+            Session.startDate = val;
         });
         $scope.$watch('endDate', function (val) {
-            Session.endDate = moment(val);
+            Session.endDate = val;
         });
         $scope.selectHotel = function (hotel) {
             Session.hotels = Array(hotel);
@@ -27,10 +28,9 @@ var PageNewTrip1 = (function () {
             return Session.hotels[0] == hotel;
         };
         $scope.suggestHotels = function () {
-            console.log(suggestRunning);
-            if (suggestRunning)
+            if ($scope.suggestRunning)
                 return;
-            suggestRunning = true;
+            $scope.suggestRunning = true;
             var search = '';
             if ($scope.hotelName !== undefined && $scope.hotelName.length > 2) {
                 search = $scope.hotelName;
@@ -45,14 +45,14 @@ var PageNewTrip1 = (function () {
                     params: { search: search }
                 }).then(function (res) {
                     $scope.hotels = res.data;
-                    suggestRunning = false;
+                    $scope.suggestRunning = false;
                 }, function () {
                     console.log("Error with hotel retrieving");
-                    suggestRunning = false;
+                    $scope.suggestRunning = false;
                 });
             }
             else {
-                suggestRunning = false;
+                $scope.suggestRunning = false;
             }
         };
     }
