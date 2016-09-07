@@ -1,4 +1,6 @@
 node_modules
 npm-debug.log*
 .vscode
+.bower.json
+bower_components
 static/css
