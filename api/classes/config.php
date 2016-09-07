@@ -15,7 +15,7 @@
           try{
               $db = new PDO("mysql:dbname=".$this->dbname.";host=".$this->dbhost, $this->dbuser, $this->dbpass);
           } catch (PDOException $e){
-              error_log("There was an error with database connection: ", $e->getMessage());
+              error_log("There was an error with database connection: " . $e->getMessage());
           }
           return $db;
       }
